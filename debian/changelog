@@ -1,3 +1,16 @@
+freebsd-libs (9.0+ds1-4) unstable; urgency=low
+
+  [ Christoph Egger ]
+  * Upload to unstable
+
+  [ Jeff Epler ]
+  * Fix 'warning: implicit declaration of function 'reallocf'
+    (and several other functions) (Closes: 685625)
+  * Make that warning an error so that it does not pass silently
+    in the future 
+
+ -- Christoph Egger <christoph@debian.org>  Sat, 29 Dec 2012 15:49:19 -0800
+
 freebsd-libs (9.0+ds1-3) unstable; urgency=low
 
   [ Robert Millan ]

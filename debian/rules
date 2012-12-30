@@ -18,7 +18,8 @@ major		:= $(shell echo $(version) | sed -e 's/\..*//g')
 revision	:= $(shell echo $(full_version) | sed -e 's/^[^+-]*//g')
 
 CFLAGS = -Wall -g -pipe -fPIC -I. -I$(CURDIR)/sys -D_GNU_SOURCE \
-         -D__va_list=__builtin_va_list
+         -D__va_list=__builtin_va_list \
+	 -Werror=implicit-function-declaration
 
 ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
 	CFLAGS += -O0
