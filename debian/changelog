@@ -1,5 +1,6 @@
-freebsd-libs (9.0+ds1-5) UNRELEASED; urgency=low
+freebsd-libs (9.0+ds2-1) UNRELEASED; urgency=low
 
+  * Add libelf and libdwarf.
   * Remove debian/patches/implicit-declaration (obsoleted by
     freebsd-glue 0.0.5).
 

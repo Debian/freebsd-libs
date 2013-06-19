@@ -1,0 +1,12 @@
+--- a/lib/libdwarf/Makefile
++++ b/lib/libdwarf/Makefile
+@@ -20,7 +20,8 @@
+ 
+ INCS=	dwarf.h libdwarf.h
+ 
+-CFLAGS+=	-I${.CURDIR}
++LDADD+=		-L../libelf -lelf
++CFLAGS+=	-I${.CURDIR} -I../libelf
+ 
+ SHLIB_MAJOR=	3
+ 

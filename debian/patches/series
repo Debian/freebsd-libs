@@ -18,3 +18,5 @@ sysconf_cpuset_size.diff
 libusb_backward.diff
 libbsd_nlist.diff
 kvm_size_t_kludge.diff
+dwarf.diff
+elf.diff

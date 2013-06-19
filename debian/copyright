@@ -1,4 +1,4 @@
-This package was debianized by Robert Millan <rmh@aybabtu.com> on
+This package was debianized by Robert Millan <rmh@debian.org> on
 Fri, 12 Aug 2005 12:04:07 +0200.
 
 It was downloaded from http://www.freebsd.org/
@@ -58,6 +58,9 @@ Copyrights:
     Copyright (C) 2009 James Gritton
     Copyright (C) 2009 Sylvestre Gallon
     Copyright (c) 2002, 2003 MarcusCom, Inc.
+    Copyright (c) 2006-2008 Joseph Koshy
+    Copyright (c) 2007 John Birrell (jb@freebsd.org)
+    Copyright (c) 2008-2009, 2011, Juniper Networks, Inc.
 
 
 Licenses:
@@ -66,6 +69,125 @@ Licenses:
            lib/libcam/camlib.c
            lib/libcam/camlib.h
            lib/libcam/scsi_cmdparse.c
+           lib/libdwarf/dwarf_abbrev.c
+           lib/libdwarf/dwarf_attr.c
+           lib/libdwarf/dwarf_attrval.c
+           lib/libdwarf/dwarf_cu.c
+           lib/libdwarf/dwarf_dealloc.c
+           lib/libdwarf/dwarf_die.c
+           lib/libdwarf/dwarf_dump.c
+           lib/libdwarf/dwarf_errmsg.c
+           lib/libdwarf/dwarf_errno.c
+           lib/libdwarf/dwarf_finish.c
+           lib/libdwarf/dwarf_form.c
+           lib/libdwarf/dwarf_func.c
+           lib/libdwarf/dwarf_init.c
+           lib/libdwarf/dwarf_loc.c
+           lib/libdwarf/dwarf.h
+           lib/libdwarf/_libdwarf.h
+           lib/libdwarf/libdwarf.h
+           lib/libelf/elf_begin.c
+           lib/libelf/elf_cntl.c
+           lib/libelf/elf_data.c
+           lib/libelf/elf_end.c
+           lib/libelf/elf_errmsg.c
+           lib/libelf/elf_errno.c
+           lib/libelf/elf_fill.c
+           lib/libelf/elf_flag.c
+           lib/libelf/elf_getarhdr.c
+           lib/libelf/elf_getarsym.c
+           lib/libelf/elf_getbase.c
+           lib/libelf/elf_getident.c
+           lib/libelf/elf_hash.c
+           lib/libelf/elf_kind.c
+           lib/libelf/elf_memory.c
+           lib/libelf/elf_next.c
+           lib/libelf/elf_phnum.c
+           lib/libelf/elf_rand.c
+           lib/libelf/elf_rawfile.c
+           lib/libelf/elf_scn.c
+           lib/libelf/elf_shnum.c
+           lib/libelf/elf_shstrndx.c
+           lib/libelf/elf_strptr.c
+           lib/libelf/elf_update.c
+           lib/libelf/elf_version.c
+           lib/libelf/gelf_cap.c
+           lib/libelf/gelf_checksum.c
+           lib/libelf/gelf_dyn.c
+           lib/libelf/gelf_ehdr.c
+           lib/libelf/gelf_fsize.c
+           lib/libelf/gelf_getclass.c
+           lib/libelf/gelf_move.c
+           lib/libelf/gelf_phdr.c
+           lib/libelf/gelf_rela.c
+           lib/libelf/gelf_rel.c
+           lib/libelf/gelf_shdr.c
+           lib/libelf/gelf_sym.c
+           lib/libelf/gelf_syminfo.c
+           lib/libelf/gelf_symshndx.c
+           lib/libelf/gelf_xlate.c
+           lib/libelf/libelf_align.c
+           lib/libelf/libelf_allocate.c
+           lib/libelf/libelf_ar.c
+           lib/libelf/libelf_ar_util.c
+           lib/libelf/libelf.c
+           lib/libelf/libelf_checksum.c
+           lib/libelf/libelf_data.c
+           lib/libelf/libelf_ehdr.c
+           lib/libelf/libelf_extended.c
+           lib/libelf/libelf_phdr.c
+           lib/libelf/libelf_shdr.c
+           lib/libelf/libelf_xlate.c
+           lib/libelf/gelf.h
+           lib/libelf/_libelf.h
+           lib/libelf/libelf.h
+           lib/libelf/elf.3
+           lib/libelf/elf_begin.3
+           lib/libelf/elf_cntl.3
+           lib/libelf/elf_end.3
+           lib/libelf/elf_errmsg.3
+           lib/libelf/elf_fill.3
+           lib/libelf/elf_flagdata.3
+           lib/libelf/elf_getarhdr.3
+           lib/libelf/elf_getarsym.3
+           lib/libelf/elf_getbase.3
+           lib/libelf/elf_getdata.3
+           lib/libelf/elf_getident.3
+           lib/libelf/elf_getphdrnum.3
+           lib/libelf/elf_getphnum.3
+           lib/libelf/elf_getscn.3
+           lib/libelf/elf_getshdrnum.3
+           lib/libelf/elf_getshdrstrndx.3
+           lib/libelf/elf_getshnum.3
+           lib/libelf/elf_getshstrndx.3
+           lib/libelf/elf_hash.3
+           lib/libelf/elf_kind.3
+           lib/libelf/elf_memory.3
+           lib/libelf/elf_next.3
+           lib/libelf/elf_rand.3
+           lib/libelf/elf_rawfile.3
+           lib/libelf/elf_strptr.3
+           lib/libelf/elf_update.3
+           lib/libelf/elf_version.3
+           lib/libelf/gelf.3
+           lib/libelf/gelf_checksum.3
+           lib/libelf/gelf_fsize.3
+           lib/libelf/gelf_getcap.3
+           lib/libelf/gelf_getclass.3
+           lib/libelf/gelf_getdyn.3
+           lib/libelf/gelf_getehdr.3
+           lib/libelf/gelf_getmove.3
+           lib/libelf/gelf_getphdr.3
+           lib/libelf/gelf_getrel.3
+           lib/libelf/gelf_getrela.3
+           lib/libelf/gelf_getshdr.3
+           lib/libelf/gelf_getsym.3
+           lib/libelf/gelf_getsyminfo.3
+           lib/libelf/gelf_getsymshndx.3
+           lib/libelf/gelf_newehdr.3
+           lib/libelf/gelf_newphdr.3
+           lib/libelf/gelf_update_ehdr.3
+           lib/libelf/gelf_xlatetof.3
            lib/libgeom/geom_ctl.c
            lib/libgeom/geom_getxml.c
            lib/libgeom/geom_stats.c

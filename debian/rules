@@ -19,6 +19,7 @@ revision	:= $(shell echo $(full_version) | sed -e 's/^[^+-]*//g')
 
 CFLAGS = -Wall -g -pipe -fPIC -I. -I$(CURDIR)/sys -D_GNU_SOURCE \
          -D__va_list=__builtin_va_list \
+	 -I/usr/include/freebsd \
 	 -Werror=implicit-function-declaration
 
 ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
@@ -37,7 +38,7 @@ TARNAME = $(SOURCE)_$(tar_version).orig.tar.gz
 
 PATH := /usr/lib/freebsd:$(PATH)
 DESTDIR = $(CURDIR)/debian/tmp
-PMAKE = COPTS="$(CFLAGS)" CFLAGS="$(CFLAGS) -isystem /usr/include/freebsd -I$(CURDIR)/debian/local/include" NO_WERROR=1 NOGCCERROR=1 \
+PMAKE = COPTS="$(CFLAGS)" CFLAGS="$(CFLAGS) -I$(CURDIR)/debian/local/include" NO_WERROR=1 NOGCCERROR=1 \
         NOSHARED=NO NO_SHARED=NO NO_PROFILE=1 DESTDIR=$(DESTDIR) make
 kernel = $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 
@@ -47,6 +48,8 @@ get-orig-source:
 	mkdir -p $(ORIGDIR)/sys/kern
 	mkdir -p $(ORIGDIR)/sys/sys
 	for i in lib/libcam lib/libdevstat lib/libgeom lib/libipx \
+		lib/libelf \
+		lib/libdwarf \
 	         lib/libkiconv lib/libnetgraph lib/libjail \
 	         lib/libkvm lib/libmemstat lib/libsbuf lib/libusb \
 	         lib/libusbhid sys/cam \
@@ -67,7 +70,7 @@ get-orig-source:
 	tar --numeric-owner --owner 0 --group 0 -czf ../$(TARNAME) $(ORIGDIR)
 	rm -rf $(ORIGDIR)
 
-BUILD_TARGETS = build-sbuf
+BUILD_TARGETS = build-sbuf build-dwarf build-elf
 
 ifeq ($(kernel), kfreebsd)
 BUILD_TARGETS += \
@@ -122,6 +125,16 @@ build-devstat-stamp: build-kvm
 	$(PMAKE) -C $(CURDIR)/lib/libdevstat SHLIBDIR=./
 	touch $@
 
+build-elf: build-elf-stamp
+build-elf-stamp:
+	$(PMAKE) -C $(CURDIR)/lib/libelf SHLIBDIR=./
+	touch $@
+
+build-dwarf: build-dwarf-stamp
+build-dwarf-stamp: build-elf
+	$(PMAKE) -C $(CURDIR)/lib/libdwarf SHLIBDIR=./
+	touch $@
+
 build-memstat: build-memstat-stamp
 build-memstat-stamp: build-kvm
 	$(PMAKE) -C $(CURDIR)/lib/libmemstat SHLIBDIR=./
@@ -156,6 +169,8 @@ clean:
 	dh_testdir
 	dh_testroot
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf clean
+	$(PMAKE) -C $(CURDIR)/lib/libdwarf clean
+	$(PMAKE) -C $(CURDIR)/lib/libelf clean
 ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libcam clean
 	$(PMAKE) -C $(CURDIR)/lib/libnetgraph clean
@@ -181,6 +196,8 @@ install: build
 
 	mkdir -p $(DESTDIR)/lib $(DESTDIR)/usr/lib $(DESTDIR)/usr/include $(DESTDIR)/usr/share/man/man3
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf install SHLIBDIR=/lib
+	$(PMAKE) -C $(CURDIR)/lib/libdwarf install SHLIBDIR=/usr/lib
+	$(PMAKE) -C $(CURDIR)/lib/libelf install SHLIBDIR=/usr/lib
 ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libcam install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libgeom install SHLIBDIR=/lib
