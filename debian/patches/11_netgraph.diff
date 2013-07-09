@@ -8,27 +8,6 @@
  #include <sys/types.h>
  #include <netgraph/ng_message.h>
  
---- a/lib/libnetgraph/sock.c
-+++ b/lib/libnetgraph/sock.c
-@@ -44,6 +44,8 @@
- #include <sys/types.h>
- #include <sys/socket.h>
- #include <stdarg.h>
-+#include <stdint.h>
-+
- #include <netgraph/ng_message.h>
- #include <netgraph/ng_socket.h>
- 
---- a/lib/libnetgraph/msg.c
-+++ b/lib/libnetgraph/msg.c
-@@ -44,6 +44,7 @@
- #include <sys/types.h>
- #include <sys/socket.h>
- #include <stdarg.h>
-+#include <stdint.h>
- #include <netgraph/ng_message.h>
- #include <netgraph/ng_socket.h>
- 
 --- a/lib/libnetgraph/Makefile
 +++ b/lib/libnetgraph/Makefile
 @@ -4,6 +4,7 @@

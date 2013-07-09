@@ -1,14 +1,3 @@
---- a/lib/libmemstat/memstat_internal.h
-+++ b/lib/libmemstat/memstat_internal.h
-@@ -28,6 +28,8 @@
- 
- #ifndef _MEMSTAT_INTERNAL_H_
- #define	_MEMSTAT_INTERNAL_H_
-+ 
-+#include <sys/queue.h> 
- 
- /*
-  * memstat maintains its own internal notion of statistics on each memory
 --- a/lib/libmemstat/memstat.h
 +++ b/lib/libmemstat/memstat.h
 @@ -29,6 +29,8 @@
@@ -36,17 +25,6 @@
  };
  
  /*
-@@ -242,6 +242,10 @@
- 	return (0);
- }
- 
-+#ifndef __DECONST
-+#define __DECONST(type, var)  ((type)(uintptr_t)(const void *)(var))
-+#endif
-+
- static int
- kread_string(kvm_t *kvm, const void *kvm_pointer, char *buffer, int buflen)
- {
 --- a/lib/libmemstat/memstat_uma.c
 +++ b/lib/libmemstat/memstat_uma.c
 @@ -51,12 +51,12 @@

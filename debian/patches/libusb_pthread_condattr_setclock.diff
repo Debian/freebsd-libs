@@ -1,0 +1,14 @@
+--- a/lib/libusb/libusb10.c
++++ b/lib/libusb/libusb10.c
+@@ -37,6 +37,11 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ 
++/* Set the clock selected for the conditon variable attribute ATTR.  */
++extern int pthread_condattr_setclock (pthread_condattr_t *__attr,
++                                      __clockid_t __clock_id)
++     __THROW __nonnull ((1));
++
+ #define	libusb_device_handle libusb20_device
+ 
+ #include "libusb20.h"

@@ -17,29 +17,3 @@
  
  MAN=	libgeom.3
  
---- a/lib/libgeom/geom_stats.c
-+++ b/lib/libgeom/geom_stats.c
-@@ -34,11 +34,11 @@
- #include <fcntl.h>
- #include <stdlib.h>
- #include <string.h>
-+#include <time.h>
- #include <unistd.h>
- #include <libgeom.h>
- 
- #include <sys/mman.h>
--#include <sys/time.h>
- #include <sys/types.h>
- #include <sys/devicestat.h>
- 
---- a/lib/libgeom/geom_xml2tree.c
-+++ b/lib/libgeom/geom_xml2tree.c
-@@ -43,7 +43,7 @@
- #include <sys/sbuf.h>
- #include <sys/sysctl.h>
- #include <err.h>
--#include <bsdxml.h>
-+#include <expat.h>
- #include <libgeom.h>
- 
- struct mystate {

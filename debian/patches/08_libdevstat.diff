@@ -23,13 +23,3 @@
  
  WARNS?=	3
  
---- a/lib/libdevstat/devstat.c
-+++ b/lib/libdevstat/devstat.c
-@@ -45,6 +45,7 @@
- #include <stdarg.h>
- #include <kvm.h>
- #include <nlist.h>
-+#include <time.h>
- 
- #include "devstat.h"
- 

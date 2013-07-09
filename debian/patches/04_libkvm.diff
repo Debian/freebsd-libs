@@ -12,18 +12,7 @@
  KVM_ARCH=${MACHINE_ARCH}
 --- a/lib/libkvm/kvm.c
 +++ b/lib/libkvm/kvm.c
-@@ -71,6 +71,10 @@
- #include <strings.h>
- #include <unistd.h>
- 
-+#ifndef _PATH_FWMEM
-+#define _PATH_FWMEM     "/dev/fwmem"
-+#endif
-+
- #include "kvm_private.h"
- 
- /* from src/lib/libc/gen/nlist.c */
-@@ -144,6 +148,7 @@
+@@ -144,6 +144,7 @@
  _kvm_open(kvm_t *kd, const char *uf, const char *mf, int flag, char *errout)
  {
  	struct stat st;
@@ -31,7 +20,7 @@
  
  	kd->vmfd = -1;
  	kd->pmfd = -1;
-@@ -153,8 +158,17 @@
+@@ -153,8 +154,17 @@
  	kd->argspc = 0;
  	kd->argv = 0;
  
@@ -106,17 +95,6 @@
  		}
  		tot.ksw_total += ttl;
  		tot.ksw_used += xsd.xsw_used;
---- a/lib/libkvm/kvm_private.h
-+++ b/lib/libkvm/kvm_private.h
-@@ -34,6 +34,8 @@
-  * $FreeBSD$
-  */
- 
-+#include <stdint.h>
-+
- struct __kvm {
- 	/*
- 	 * a string to be prepended to error messages
 --- a/lib/libkvm/kvm_proc.c
 +++ b/lib/libkvm/kvm_proc.c
 @@ -54,7 +54,7 @@
@@ -128,7 +106,7 @@
  #include <sys/user.h>
  #include <sys/proc.h>
  #define	_WANT_PRISON	/* make jail.h give us 'struct prison' */
-@@ -116,6 +116,7 @@
+@@ -113,6 +113,7 @@
  kvm_proclist(kvm_t *kd, int what, int arg, struct proc *p,
      struct kinfo_proc *bp, int maxcnt)
  {
@@ -136,7 +114,7 @@
  	int cnt = 0;
  	struct kinfo_proc kinfo_proc, *kp;
  	struct pgrp pgrp;
-@@ -440,6 +441,8 @@
+@@ -437,6 +438,8 @@
  		++cnt;
  	}
  	return (cnt);

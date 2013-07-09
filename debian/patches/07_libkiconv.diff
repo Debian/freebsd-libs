@@ -5,7 +5,7 @@
 
 --- a/lib/libkiconv/Makefile
 +++ b/lib/libkiconv/Makefile
-@@ -14,6 +14,7 @@
+@@ -17,6 +17,7 @@
  		kiconv.3 kiconv_add_xlat16_table.3
  
  CFLAGS+=	-I${.CURDIR}/../../sys
@@ -23,49 +23,3 @@
  
  #ifndef _KICONV_QUIRKS_H_
  #define _KICONV_QUIRKS_H_
---- a/lib/libkiconv/xlat16_iconv.c
-+++ b/lib/libkiconv/xlat16_iconv.c
-@@ -426,8 +426,8 @@
- #include <errno.h>
- 
- int
--kiconv_add_xlat16_cspair(const char *tocode __unused, const char *fromcode __unused,
--    int flag __unused)
-+kiconv_add_xlat16_cspair(const char *tocode, const char *fromcode,
-+    int flag)
- {
- 
- 	errno = EINVAL;
-@@ -435,7 +435,7 @@
- }
- 
- int
--kiconv_add_xlat16_cspairs(const char *tocode __unused, const char *fromcode __unused)
-+kiconv_add_xlat16_cspairs(const char *tocode, const char *fromcode)
- {
- 	errno = EINVAL;
- 	return (-1);
---- a/lib/libkiconv/quirks.c
-+++ b/lib/libkiconv/quirks.c
-@@ -187,7 +187,7 @@
- #include <sys/iconv.h>
- 
- const char *
--kiconv_quirkcs(const char* base __unused, int vendor __unused)
-+kiconv_quirkcs(const char* base, int vendor)
- {
- 
- 	return (base);
---- a/lib/libkiconv/xlat16_sysctl.c
-+++ b/lib/libkiconv/xlat16_sysctl.c
-@@ -75,8 +75,8 @@
- #include <errno.h>
- 
- int
--kiconv_add_xlat16_table(const char *to __unused, const char *from __unused,
--    const void *data __unused, int datalen __unused)
-+kiconv_add_xlat16_table(const char *to, const char *from,
-+    const void *data, int datalen)
- {
- 
- 	return (EINVAL);

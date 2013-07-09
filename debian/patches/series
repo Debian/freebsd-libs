@@ -1,5 +1,4 @@
 cdefs_macros.diff
-01_sys_cam.diff
 02_libcam.diff
 03_libsbuf.diff
 04_libkvm.diff
@@ -20,3 +19,5 @@ libbsd_nlist.diff
 kvm_size_t_kludge.diff
 dwarf.diff
 elf.diff
+pthread_condattr_setclock.diff
+libusb_pthread_condattr_setclock.diff
