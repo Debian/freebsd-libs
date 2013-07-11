@@ -3,7 +3,7 @@ See the comments in preserve_libkvm_abi.diff for an explanation
 
 --- a/lib/libkvm/kvm_proc.c
 +++ b/lib/libkvm/kvm_proc.c
-@@ -717,6 +717,10 @@
+@@ -720,6 +720,10 @@
  	ssize_t amount;
  	int fd;
  
