@@ -5,6 +5,8 @@ freebsd-libs (9.1-1) UNRELEASED; urgency=low
   * Enable __FreeBSD_version when building freebsd-libs sources.
   * preserve_libkvm_abi.diff (and no_kvm_uread_in_freebsd10.diff):
     Backport fix from upstream to preserve 9.0 ABI in libkvm.
+  * missing_static_decl.diff: Fix for _libdwarf_errors being exported in
+    libdwarf.
 
  -- Robert Millan <rmh@debian.org>  Tue, 09 Jul 2013 22:49:44 +0200
 
