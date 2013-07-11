@@ -1,3 +1,9 @@
+# Patches from (or merged in) upstream
+preserve_libkvm_abi.diff
+
+# Patches that are in good shape for merging upstream
+
+# Other patches that might or might not be mergeable
 cdefs_macros.diff
 02_libcam.diff
 03_libsbuf.diff
@@ -19,5 +25,7 @@ libbsd_nlist.diff
 kvm_size_t_kludge.diff
 dwarf.diff
 elf.diff
-pthread_condattr_setclock.diff
+
+# Patches that are likely to be Debian-specific
+no_kvm_uread_in_freebsd10.diff
 libusb_pthread_condattr_setclock.diff
