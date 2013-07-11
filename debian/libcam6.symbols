@@ -103,6 +103,7 @@ libcam.so.6 libcam6 #MINVER#
  scsi_progress_sbuf@Base 9.0
  scsi_print_inquiry@Base 7.0
  scsi_read_block_limits@Base 7.0
+ scsi_read_buffer@Base 9.1
  scsi_read_capacity@Base 7.0
  scsi_read_capacity_16@Base 7.0
  scsi_read_position@Base 7.0
@@ -143,7 +144,15 @@ libcam.so.6 libcam6 #MINVER#
  scsi_stream_sbuf@Base 9.0
  scsi_synchronize_cache@Base 7.0
  scsi_test_unit_ready@Base 7.0
+ scsi_unmap@Base 9.1
+ scsi_write_buffer@Base 9.1
  scsi_write_filemarks@Base 7.0
+ scsi_write_same@Base 9.1
+ semb_print_ident@Base 9.1
+ semb_read_buffer@Base 9.1
+ semb_receive_diagnostic_results@Base 9.1
+ semb_send_diagnostic@Base 9.1
+ semb_write_buffer@Base 9.1
  (optional)asc_table_size@Base 7.0
  (optional)sense_key_table@Base 7.0
  (optional)sense_key_table_size@Base 7.0

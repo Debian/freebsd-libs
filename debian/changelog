@@ -2,6 +2,8 @@ freebsd-libs (9.1-1) UNRELEASED; urgency=low
 
   * New upstream release.
     - Sync all patches.
+    - Acknowledge new symbols in libusbhid4debian, libelf-freebsd-1,
+      libusb2debian and libcam6.
   * Enable __FreeBSD_version when building freebsd-libs sources.
   * preserve_libkvm_abi.diff (and no_kvm_uread_in_freebsd10.diff):
     Backport fix from upstream to preserve 9.0 ABI in libkvm.

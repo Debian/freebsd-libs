@@ -64,24 +64,30 @@ libelf.so.1 libelf-freebsd-1 #MINVER#
  elf_version@FBSD_1.0 9.0+ds2
  gelf_checksum@FBSD_1.0 9.0+ds2
  gelf_fsize@FBSD_1.0 9.0+ds2
+ gelf_getcap@FBSD_1.0 9.1
  gelf_getclass@FBSD_1.0 9.0+ds2
  gelf_getdyn@FBSD_1.0 9.0+ds2
  gelf_getehdr@FBSD_1.0 9.0+ds2
+ gelf_getmove@FBSD_1.0 9.1
  gelf_getphdr@FBSD_1.0 9.0+ds2
  gelf_getrel@FBSD_1.0 9.0+ds2
  gelf_getrela@FBSD_1.0 9.0+ds2
  gelf_getshdr@FBSD_1.0 9.0+ds2
  gelf_getsym@FBSD_1.0 9.0+ds2
+ gelf_getsyminfo@FBSD_1.0 9.1
  gelf_getsymshndx@FBSD_1.0 9.0+ds2
  gelf_newehdr@FBSD_1.0 9.0+ds2
  gelf_newphdr@FBSD_1.0 9.0+ds2
+ gelf_update_cap@FBSD_1.0 9.1
  gelf_update_dyn@FBSD_1.0 9.0+ds2
  gelf_update_ehdr@FBSD_1.0 9.0+ds2
+ gelf_update_move@FBSD_1.0 9.1
  gelf_update_phdr@FBSD_1.0 9.0+ds2
  gelf_update_rel@FBSD_1.0 9.0+ds2
  gelf_update_rela@FBSD_1.0 9.0+ds2
  gelf_update_shdr@FBSD_1.0 9.0+ds2
  gelf_update_sym@FBSD_1.0 9.0+ds2
+ gelf_update_syminfo@FBSD_1.0 9.1
  gelf_update_symshndx@FBSD_1.0 9.0+ds2
  gelf_xlatetof@FBSD_1.0 9.0+ds2
  gelf_xlatetom@FBSD_1.0 9.0+ds2
