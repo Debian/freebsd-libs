@@ -2,6 +2,7 @@ freebsd-libs (9.1-1) UNRELEASED; urgency=low
 
   * New upstream release.
     - Sync all patches.
+  * Enable __FreeBSD_version when building freebsd-libs sources.
 
  -- Robert Millan <rmh@debian.org>  Tue, 09 Jul 2013 22:49:44 +0200
 
