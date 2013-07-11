@@ -1,16 +1,16 @@
-freebsd-libs (9.1-1) UNRELEASED; urgency=low
+freebsd-libs (9.1-1) experimental; urgency=low
 
   * New upstream release.
     - Sync all patches.
-    - Acknowledge new symbols in libusbhid4debian, libelf-freebsd-1,
-      libusb2debian and libcam6.
     - Enable __FreeBSD_version when building freebsd-libs sources.
     - preserve_libkvm_abi.diff (and no_kvm_uread_in_freebsd10.diff):
       Backport fix from upstream to preserve 9.0 ABI in libkvm.
     - missing_static_decl.diff: Fix for _libdwarf_errors being exported in
       libdwarf.
+    - Acknowledge new symbols in libusbhid4debian, libelf-freebsd-1,
+      libusb2debian and libcam6.
 
- -- Robert Millan <rmh@debian.org>  Tue, 09 Jul 2013 22:49:44 +0200
+ -- Robert Millan <rmh@debian.org>  Thu, 11 Jul 2013 19:55:11 +0200
 
 freebsd-libs (9.0+ds2-1) experimental; urgency=low
 
