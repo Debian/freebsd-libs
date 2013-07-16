@@ -1,6 +1,6 @@
 # Patches from (or merged in) upstream
 preserve_libkvm_abi.diff
-missing_static_decl.diff
+#missing_static_decl.diff
 
 # Patches that are in good shape for merging upstream
 
@@ -24,8 +24,8 @@ sysconf_cpuset_size.diff
 libusb_backward.diff
 libbsd_nlist.diff
 kvm_size_t_kludge.diff
-dwarf.diff
-elf.diff
+#dwarf.diff
+#elf.diff
 
 # Patches that are likely to be Debian-specific
 no_kvm_uread_in_freebsd10.diff

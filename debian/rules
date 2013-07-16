@@ -49,8 +49,8 @@ get-orig-source:
 	mkdir -p $(ORIGDIR)/sys/kern
 	mkdir -p $(ORIGDIR)/sys/sys
 	for i in lib/libcam lib/libdevstat lib/libgeom lib/libipx \
-		lib/libelf \
-		lib/libdwarf \
+		$(shell # lib/libelf ) \
+		$(shell # lib/libdwarf ) \
 	         lib/libkiconv lib/libnetgraph lib/libjail \
 	         lib/libkvm lib/libmemstat lib/libsbuf lib/libusb \
 	         lib/libusbhid sys/cam \
@@ -71,7 +71,7 @@ get-orig-source:
 	tar --numeric-owner --owner 0 --group 0 -czf ../$(TARNAME) $(ORIGDIR)
 	rm -rf $(ORIGDIR)
 
-BUILD_TARGETS = build-sbuf build-dwarf build-elf
+BUILD_TARGETS = build-sbuf # build-dwarf build-elf
 
 ifeq ($(kernel), kfreebsd)
 BUILD_TARGETS += \
