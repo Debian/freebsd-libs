@@ -1,3 +1,9 @@
+freebsd-libs (9.1+ds1-2) UNRELEASED; urgency=low
+
+  * Bump freebsd-glue B-D (for roundup2).
+
+ -- Robert Millan <rmh@debian.org>  Tue, 16 Jul 2013 15:24:27 +0200
+
 freebsd-libs (9.1+ds1-1) experimental; urgency=low
 
   * Temporarily remove libelf and libdwarf, until namespace issues are
