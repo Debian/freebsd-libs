@@ -2,6 +2,7 @@ freebsd-libs (9.1+ds1-3) UNRELEASED; urgency=low
 
   [ Petr Salinger ]
   * extend cdefs_macros.diff in libusb.h part
+  * libusb really needs libbsd
 
  -- Robert Millan <rmh@debian.org>  Tue, 16 Jul 2013 15:24:27 +0200
 

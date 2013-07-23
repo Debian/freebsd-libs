@@ -11,13 +11,14 @@
  
 --- a/lib/libusb/Makefile
 +++ b/lib/libusb/Makefile
-@@ -15,6 +15,7 @@
- MAN=		libusb.3 libusb20.3
- MKLINT=		no
- NOGCCERROR=
+@@ -19,7 +19,7 @@
+ WARNS?=		2
+ 
+ DPADD=		${LIBPTHREAD}
+-LDADD=		-lpthread
 +LDADD+=		-lpthread -lrt -lbsd
  
- WARNS?=		2
+ MLINKS+=	libusb.3 usb.3
  
 --- a/lib/libusb/libusb.h
 +++ b/lib/libusb/libusb.h
