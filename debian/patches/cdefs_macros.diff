@@ -53,6 +53,15 @@ they're used by external programs.  Manual patching is required...
  
  typedef struct libusb_ss_endpoint_companion_descriptor {
  	uint8_t bLength;
+@@ -250,7 +250,7 @@
+ 	uint8_t bMaxBurst;
+ 	uint8_t bmAttributes;
+ 	uint16_t wBytesPerInterval;
+-}	libusb_ss_endpoint_companion_descriptor __aligned(sizeof(void *));
++}	libusb_ss_endpoint_companion_descriptor __attribute__((__aligned__(sizeof(void *))));
+ 
+ typedef struct libusb_interface_descriptor {
+ 	uint8_t	bLength;
 @@ -265,12 +265,12 @@
  	struct libusb_endpoint_descriptor *endpoint;
  	uint8_t *extra;
@@ -77,6 +86,33 @@ they're used by external programs.  Manual patching is required...
  
  typedef struct libusb_usb_2_0_device_capability_descriptor {
  	uint8_t bLength;
+@@ -292,7 +292,7 @@
+ 	uint8_t bDevCapabilityType;
+ 	uint32_t bmAttributes;
+ #define LIBUSB_USB_2_0_CAPABILITY_LPM_SUPPORT  (1 << 1)
+-}	libusb_usb_2_0_device_capability_descriptor __aligned(sizeof(void *));
++}	libusb_usb_2_0_device_capability_descriptor __attribute__((__aligned__(sizeof(void *))));
+ 
+ typedef struct libusb_ss_usb_device_capability_descriptor {
+ 	uint8_t bLength;
+@@ -308,7 +308,7 @@
+ 	uint8_t bFunctionalitySupport;
+ 	uint8_t bU1DevExitLat;
+ 	uint16_t wU2DevExitLat;
+-}	libusb_ss_usb_device_capability_descriptor __aligned(sizeof(void *));
++}	libusb_ss_usb_device_capability_descriptor __attribute__((__aligned__(sizeof(void *))));
+ 
+ typedef struct libusb_bos_descriptor {
+ 	uint8_t bLength;
+@@ -317,7 +317,7 @@
+ 	uint8_t bNumDeviceCapabilities;
+ 	struct libusb_usb_2_0_device_capability_descriptor *usb_2_0_ext_cap;
+ 	struct libusb_ss_usb_device_capability_descriptor *ss_usb_cap;
+-}	libusb_bos_descriptor __aligned(sizeof(void *));
++}	libusb_bos_descriptor __attribute__((__aligned__(sizeof(void *))));
+ 
+ typedef struct libusb_control_setup {
+ 	uint8_t	bmRequestType;
 @@ -333,7 +333,7 @@
  	uint32_t length;
  	uint32_t actual_length;
