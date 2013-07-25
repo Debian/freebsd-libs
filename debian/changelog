@@ -6,6 +6,14 @@ freebsd-libs (9.1+ds1-3) UNRELEASED; urgency=low
 
   [ Guillem Jover ]
   * Switch to canonical Vcs URLs.
+  * Add build-indep and build-arch debian/rules targets:
+    - Rename BUILD_TARGETS to BUILD_ARCH_TARGETS.
+    - Rename build to build-arch and install to install-arch targets.
+    - Add empty build-indep target.
+    - Add build target depending on build-indep and build-arch.
+    - Split install into install-indep and install-arch targets.
+    - Switch binary-indep and binary-arch to depend on install-indep and
+      install-arch targets respectively.
 
  -- Robert Millan <rmh@debian.org>  Tue, 16 Jul 2013 15:24:27 +0200
 

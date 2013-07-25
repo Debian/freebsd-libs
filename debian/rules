@@ -71,10 +71,10 @@ get-orig-source:
 	tar --numeric-owner --owner 0 --group 0 -czf ../$(TARNAME) $(ORIGDIR)
 	rm -rf $(ORIGDIR)
 
-BUILD_TARGETS = build-sbuf # build-dwarf build-elf
+BUILD_ARCH_TARGETS = build-sbuf # build-dwarf build-elf
 
 ifeq ($(kernel), kfreebsd)
-BUILD_TARGETS += \
+BUILD_ARCH_TARGETS += \
 	build-cam \
 	build-geom \
 	build-ipx \
@@ -89,7 +89,9 @@ BUILD_TARGETS += \
 	build-alias
 endif
 
-build: $(BUILD_TARGETS)
+build: build-indep build-arch
+build-indep:
+build-arch: $(BUILD_ARCH_TARGETS)
 
 build-cam: build-cam-stamp
 build-cam-stamp: build-sbuf
@@ -189,11 +191,19 @@ endif
 	rm -f *stamp
 	dh_clean
 
-install: build
+install-indep: build-indep
 	dh_testdir
 	dh_testroot
-	dh_prep
-	dh_installdirs
+	dh_prep -i
+	dh_installdirs -i
+
+	dh_install -i --list-missing
+
+install-arch: build-arch
+	dh_testdir
+	dh_testroot
+	dh_prep -a
+	dh_installdirs -a
 
 	mkdir -p $(DESTDIR)/lib $(DESTDIR)/usr/lib $(DESTDIR)/usr/include $(DESTDIR)/usr/share/man/man3
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf install SHLIBDIR=/lib
@@ -219,10 +229,10 @@ ifeq ($(kernel), kfreebsd)
 	install -m755 debian/libusb-config $(CURDIR)/debian/tmp/usr/bin
 endif
 
-	dh_install --list-missing
+	dh_install -a --list-missing
 
 # Build architecture-independent files here.
-binary-indep: build install
+binary-indep: install-indep
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs -i
@@ -236,7 +246,7 @@ binary-indep: build install
 	dh_builddeb -i
 
 # Build architecture-dependent files here.
-binary-arch: build install
+binary-arch: install-arch
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs -a
