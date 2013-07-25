@@ -4,6 +4,9 @@ freebsd-libs (9.1+ds1-3) UNRELEASED; urgency=low
   * extend cdefs_macros.diff in libusb.h part
   * libusb really needs libbsd
 
+  [ Guillem Jover ]
+  * Switch to canonical Vcs URLs.
+
  -- Robert Millan <rmh@debian.org>  Tue, 16 Jul 2013 15:24:27 +0200
 
 freebsd-libs (9.1+ds1-2) unstable; urgency=low
