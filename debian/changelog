@@ -14,6 +14,7 @@ freebsd-libs (9.1+ds1-3) UNRELEASED; urgency=low
     - Split install into install-indep and install-arch targets.
     - Switch binary-indep and binary-arch to depend on install-indep and
       install-arch targets respectively.
+  * Now using Standards-Version 3.9.4.
 
  -- Robert Millan <rmh@debian.org>  Tue, 16 Jul 2013 15:24:27 +0200
 

@@ -16,7 +16,7 @@ Build-Depends: debhelper (>= 7), pkg-config,
  freebsd-glue (>= 0.0.8~),
 Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/freebsd-libs/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/freebsd-libs/
-Standards-Version: 3.9.2
+Standards-Version: 3.9.4
 
 Package: libsbuf6
 Architecture: any
