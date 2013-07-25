@@ -1,4 +1,4 @@
-freebsd-libs (9.1+ds1-3) UNRELEASED; urgency=low
+freebsd-libs (9.1+ds1-3) unstable; urgency=low
 
   [ Petr Salinger ]
   * extend cdefs_macros.diff in libusb.h part
@@ -18,7 +18,7 @@ freebsd-libs (9.1+ds1-3) UNRELEASED; urgency=low
   * Add missing old symbols to libkvm0 and libsbuf6 symbols files.
   * Add missing kvm_dpcpu_setcpu(3) man page to libkvm-dev.
 
- -- Robert Millan <rmh@debian.org>  Tue, 16 Jul 2013 15:24:27 +0200
+ -- Guillem Jover <guillem@debian.org>  Thu, 25 Jul 2013 17:04:34 +0200
 
 freebsd-libs (9.1+ds1-2) unstable; urgency=low
 
