@@ -16,6 +16,7 @@ freebsd-libs (9.1+ds1-3) UNRELEASED; urgency=low
       install-arch targets respectively.
   * Now using Standards-Version 3.9.4.
   * Add missing old symbols to libkvm0 and libsbuf6 symbols files.
+  * Add missing kvm_dpcpu_setcpu(3) man page to libkvm-dev.
 
  -- Robert Millan <rmh@debian.org>  Tue, 16 Jul 2013 15:24:27 +0200
 
