@@ -17,6 +17,8 @@ libkvm.so.0 libkvm0 #MINVER#
  kvm_read@Base 7.0
  kvm_uread@Base 7.0
  kvm_write@Base 7.0
+ (optional)_kvm_dpcpu_initialized@Base 8.3~
+ (optional)_kvm_dpcpu_validaddr@Base 8.3~
  (optional)_kvm_err@Base 7.0
  (optional)_kvm_freeprocs@Base 7.0
  (optional)_kvm_freevtop@Base 7.0

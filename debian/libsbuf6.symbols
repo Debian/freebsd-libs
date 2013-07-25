@@ -1,4 +1,5 @@
 libsbuf.so.6 libsbuf6 #MINVER#
+ FBSD_1.2@FBSD_1.2 9.0
  sbuf_bcat@FBSD_1.2 9.0
  sbuf_bcpy@FBSD_1.2 9.0
  sbuf_cat@FBSD_1.2 9.0
