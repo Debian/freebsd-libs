@@ -197,6 +197,7 @@ install-indep: build-indep
 	dh_prep -i
 	dh_installdirs -i
 
+	mkdir -p $(DESTDIR)
 	dh_install -i --list-missing
 
 install-arch: build-arch
