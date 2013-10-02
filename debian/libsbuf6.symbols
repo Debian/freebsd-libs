@@ -1,5 +1,6 @@
 libsbuf.so.6 libsbuf6 #MINVER#
  FBSD_1.2@FBSD_1.2 9.0
+ FBSD_1.3@FBSD_1.3 9.2
  sbuf_bcat@FBSD_1.2 9.0
  sbuf_bcpy@FBSD_1.2 9.0
  sbuf_cat@FBSD_1.2 9.0
@@ -8,6 +9,7 @@ libsbuf.so.6 libsbuf6 #MINVER#
  sbuf_data@FBSD_1.2 9.0
  sbuf_delete@FBSD_1.2 9.0
  sbuf_done@FBSD_1.2 9.0
+ sbuf_end_section@FBSD_1.3 9.2
  sbuf_error@FBSD_1.2 9.0
  sbuf_finish@FBSD_1.2 9.0
  sbuf_len@FBSD_1.2 9.0
@@ -16,5 +18,6 @@ libsbuf.so.6 libsbuf6 #MINVER#
  sbuf_putc@FBSD_1.2 9.0
  sbuf_set_drain@FBSD_1.2 9.0
  sbuf_setpos@FBSD_1.2 9.0
+ sbuf_start_section@FBSD_1.3 9.2
  sbuf_trim@FBSD_1.2 9.0
  sbuf_vprintf@FBSD_1.2 9.0

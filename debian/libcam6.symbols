@@ -62,6 +62,9 @@ libcam.so.6 libcam6 #MINVER#
  csio_encode@Base 7.0
  csio_encode_visit@Base 7.0
  num_cam_status_entries@Base 7.0
+ scsi_ata_identify@Base 9.2
+ scsi_ata_pass_16@Base 9.2
+ scsi_ata_trim@Base 9.2
  scsi_block_sbuf@Base 9.0
  scsi_calc_syncparam@Base 7.0
  scsi_calc_syncsrate@Base 7.0
@@ -70,12 +73,17 @@ libcam.so.6 libcam6 #MINVER#
  scsi_command_string@Base 7.0
  scsi_delay@Base 7.0
  scsi_desc_iterate@Base 9.0
+ scsi_devid_is_lun_eui64@Base 9.2
+ scsi_devid_is_lun_naa@Base 9.2
+ scsi_devid_is_lun_name@Base 9.2
+ scsi_devid_is_lun_t10@Base 9.2
  scsi_devid_is_naa_ieee_reg@Base 9.0
  scsi_devid_is_sas_target@Base 9.0
  scsi_devid_match@Base 9.0
  scsi_erase@Base 7.0
  scsi_error_action@Base 7.0
  scsi_extract_sense@Base 9.0
+ scsi_extract_sense_ccb@Base 9.2
  scsi_extract_sense_len@Base 9.0
  scsi_find_desc@Base 9.0
  scsi_format_unit@Base 7.0

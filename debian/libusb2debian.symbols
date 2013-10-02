@@ -43,6 +43,7 @@ libusb.so.2debian libusb2debian #MINVER#
  libusb20_dev_get_parent_address@Base 8.3~
  libusb20_dev_get_parent_port@Base 8.3~
  libusb20_dev_get_power_mode@Base 7.1
+ libusb20_dev_get_power_usage@Base 9.2
  libusb20_dev_get_speed@Base 7.1
  libusb20_dev_kernel_driver_active@Base 7.1
  libusb20_dev_open@Base 7.1

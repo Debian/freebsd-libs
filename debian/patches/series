@@ -1,5 +1,4 @@
 # Patches from (or merged in) upstream
-preserve_libkvm_abi.diff
 #missing_static_decl.diff
 
 # Patches that are in good shape for merging upstream
@@ -28,5 +27,4 @@ kvm_size_t_kludge.diff
 #elf.diff
 
 # Patches that are likely to be Debian-specific
-no_kvm_uread_in_freebsd10.diff
 libusb_pthread_condattr_setclock.diff

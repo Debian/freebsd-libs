@@ -114,7 +114,7 @@
  	int cnt = 0;
  	struct kinfo_proc kinfo_proc, *kp;
  	struct pgrp pgrp;
-@@ -437,6 +438,8 @@
+@@ -439,6 +440,8 @@
  		++cnt;
  	}
  	return (cnt);
