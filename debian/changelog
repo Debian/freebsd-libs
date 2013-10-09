@@ -1,4 +1,4 @@
-freebsd-libs (9.2+ds1-1) UNRELEASED; urgency=low
+freebsd-libs (9.2+ds1-1) experimental; urgency=low
 
   * Add libelf and libdwarf, this time changing the SONAME to avoid namespace
     collisions.
