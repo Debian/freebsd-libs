@@ -4,6 +4,7 @@ freebsd-libs (9.2+ds1-1) UNRELEASED; urgency=low
     collisions.
   * kvm_size_t_kludge.diff: Use <stddef.h> instead of unportably relying
     on private type names.
+  * Remove libbsd_nlist.diff (obsolete).
 
  -- Robert Millan <rmh@debian.org>  Wed, 09 Oct 2013 23:21:11 +0200
 
