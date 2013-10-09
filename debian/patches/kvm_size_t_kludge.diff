@@ -1,11 +1,12 @@
 --- a/lib/libkvm/kvm.h
 +++ b/lib/libkvm/kvm.h
-@@ -42,7 +42,7 @@
+@@ -42,7 +42,8 @@
  #define	VRS_KEY		"VERSION"
  
  #ifndef _SIZE_T_DECLARED
 -typedef	__size_t	size_t;
-+typedef	__this_is_a_temporary_kludge__size_t	size_t;
++#define __need_size_t
++#include <stddef.h>
  #define	_SIZE_T_DECLARED
  #endif
  

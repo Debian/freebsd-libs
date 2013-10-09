@@ -2,6 +2,8 @@ freebsd-libs (9.2+ds1-1) UNRELEASED; urgency=low
 
   * Add libelf and libdwarf, this time changing the SONAME to avoid namespace
     collisions.
+  * kvm_size_t_kludge.diff: Use <stddef.h> instead of unportably relying
+    on private type names.
 
  -- Robert Millan <rmh@debian.org>  Wed, 09 Oct 2013 23:21:11 +0200
 
