@@ -1,0 +1,4 @@
+usr/lib/libdwarf-freebsd.a
+usr/lib/libdwarf-freebsd*.so
+usr/include/dwarf.h
+usr/include/libdwarf.h

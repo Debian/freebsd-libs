@@ -1,11 +1,19 @@
 --- a/lib/libdwarf/Makefile
 +++ b/lib/libdwarf/Makefile
+@@ -1,6 +1,6 @@
+ # $FreeBSD$
+ 
+-LIB=	dwarf
++LIB=	dwarf-freebsd
+ 
+ SRCS=	\
+ 	dwarf_abbrev.c		\
 @@ -20,7 +20,8 @@
  
  INCS=	dwarf.h libdwarf.h
  
 -CFLAGS+=	-I${.CURDIR}
-+LDADD+=		-L../libelf -lelf
++LDADD+=		-L../libelf -lelf-freebsd
 +CFLAGS+=	-I${.CURDIR} -I../libelf
  
  SHLIB_MAJOR=	3
