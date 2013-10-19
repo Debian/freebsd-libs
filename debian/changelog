@@ -1,3 +1,9 @@
+freebsd-libs (9.2+ds1-2) UNRELEASED; urgency=low
+
+  * Remove myself from Uploaders.
+
+ -- Guillem Jover <guillem@debian.org>  Wed, 16 Oct 2013 21:35:48 +0200
+
 freebsd-libs (9.2+ds1-1) experimental; urgency=low
 
   * Add libelf and libdwarf, this time changing the SONAME to avoid namespace
