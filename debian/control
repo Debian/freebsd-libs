@@ -67,19 +67,18 @@ Description: Development files for libdwarf (FreeBSD version)
 Package: libelf-freebsd-1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: library to consume and produce DWARF debug information (FreeBSD version)
- The libdwarf package provides a shared library which allows reading/consumer
- and writing/producer of DWARF debugging information from object files, shared
- libraries, and executables.
+Description-en: library to read and write ELF files
+ The libelf package provides a shared library which allows reading and
+ writing ELF files on a high level.
 
 Package: libelf-freebsd-dev
 Section: libdevel
 Architecture: any
 Depends: libelf-freebsd-1 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev
 Conflicts: libelf-dev, libelfg0-dev
-Description: Development files for libdwarf (FreeBSD version)
+Description: Development files for libelf (FreeBSD version)
  This package contains the header files and static library needed to
- compile applications that use libdwarf.
+ compile applications that use libelf.
 
 Package: libcam6
 Architecture: kfreebsd-any
