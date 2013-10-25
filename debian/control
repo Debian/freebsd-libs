@@ -67,7 +67,7 @@ Description: Development files for libdwarf (FreeBSD version)
 Package: libelf-freebsd-1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description-en: library to read and write ELF files
+Description: library to read and write ELF files
  The libelf package provides a shared library which allows reading and
  writing ELF files on a high level.
 
