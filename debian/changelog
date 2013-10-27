@@ -1,3 +1,9 @@
+freebsd-libs (9.2+ds1-3) unstable; urgency=low
+
+  * Make libelf and libdwarf kfreebsd-any.
+
+ -- Robert Millan <rmh@debian.org>  Sun, 27 Oct 2013 23:52:33 +0100
+
 freebsd-libs (9.2+ds1-2) unstable; urgency=low
 
   [ Guillem Jover ]
