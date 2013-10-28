@@ -13,7 +13,7 @@ Build-Depends: debhelper (>= 7), pkg-config,
  libexpat-dev [kfreebsd-any],
 # libncurses5-dev: needed by libalias
  libncurses5-dev [kfreebsd-any],
- freebsd-glue (>= 0.0.8~),
+ freebsd-glue (>= 0.0.13~),
 Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/freebsd-libs/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/freebsd-libs/
 Standards-Version: 3.9.4
@@ -48,7 +48,7 @@ Description: Development files for libsbuf
  compile applications that use libsbuf.
 
 Package: libdwarf-freebsd-3
-Architecture: kfreebsd-any
+Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: library to consume and produce DWARF debug information (FreeBSD version)
  The libdwarf package provides a shared library which allows reading/consumer
@@ -57,15 +57,16 @@ Description: library to consume and produce DWARF debug information (FreeBSD ver
 
 Package: libdwarf-freebsd-dev
 Section: libdevel
-Architecture: kfreebsd-any
-Depends: libdwarf-freebsd-3 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev
+Architecture: any
+Depends: libdwarf-freebsd-3 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev,
+ libelf-freebsd-dev,
 Conflicts: libdwarf-dev
 Description: Development files for libdwarf (FreeBSD version)
  This package contains the header files and static library needed to
  compile applications that use libdwarf.
 
 Package: libelf-freebsd-1
-Architecture: kfreebsd-any
+Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: library to read and write ELF files
  The libelf package provides a shared library which allows reading and
@@ -73,7 +74,7 @@ Description: library to read and write ELF files
 
 Package: libelf-freebsd-dev
 Section: libdevel
-Architecture: kfreebsd-any
+Architecture: any
 Depends: libelf-freebsd-1 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev
 Conflicts: libelf-dev, libelfg0-dev
 Description: Development files for libelf (FreeBSD version)

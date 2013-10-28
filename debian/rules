@@ -70,13 +70,15 @@ get-orig-source:
 	tar --numeric-owner --owner 0 --group 0 -czf ../$(TARNAME) $(ORIGDIR)
 	rm -rf $(ORIGDIR)
 
-BUILD_ARCH_TARGETS = build-sbuf
+BUILD_ARCH_TARGETS = \
+	build-sbuf \
+	build-dwarf \
+	build-elf \
+	$(NULL)
 
 ifeq ($(kernel), kfreebsd)
 BUILD_ARCH_TARGETS += \
 	build-cam \
-	build-dwarf \
-	build-elf \
 	build-geom \
 	build-ipx \
 	build-kiconv \
@@ -173,10 +175,10 @@ clean:
 	dh_testdir
 	dh_testroot
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf clean
-ifeq ($(kernel), kfreebsd)
-	$(PMAKE) -C $(CURDIR)/lib/libcam clean
 	$(PMAKE) -C $(CURDIR)/lib/libdwarf clean
 	$(PMAKE) -C $(CURDIR)/lib/libelf clean
+ifeq ($(kernel), kfreebsd)
+	$(PMAKE) -C $(CURDIR)/lib/libcam clean
 	$(PMAKE) -C $(CURDIR)/lib/libnetgraph clean
 	$(PMAKE) -C $(CURDIR)/lib/libdevstat clean
 	$(PMAKE) -C $(CURDIR)/lib/libmemstat clean
@@ -209,9 +211,9 @@ install-arch: build-arch
 
 	mkdir -p $(DESTDIR)/lib $(DESTDIR)/usr/lib $(DESTDIR)/usr/include $(DESTDIR)/usr/share/man/man3
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf install SHLIBDIR=/lib
-ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libdwarf install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libelf install SHLIBDIR=/usr/lib
+ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libcam install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libgeom install SHLIBDIR=/lib
 	$(PMAKE) -C $(CURDIR)/lib/libipx install SHLIBDIR=/lib
