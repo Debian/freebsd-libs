@@ -1,8 +1,8 @@
-freebsd-libs (9.2+ds1-6) UNRELEASED; urgency=low
+freebsd-libs (9.2+ds1-6) unstable; urgency=low
 
   * Bump freebsd-glue Build-Depends on 0.1.14.
 
- -- Robert Millan <rmh@debian.org>  Wed, 30 Oct 2013 00:07:48 +0100
+ -- Robert Millan <rmh@debian.org>  Wed, 30 Oct 2013 12:34:38 +0100
 
 freebsd-libs (9.2+ds1-5) unstable; urgency=low
 
