@@ -1,14 +1,3 @@
---- a/lib/libusb/usb.h
-+++ b/lib/libusb/usb.h
-@@ -28,7 +28,7 @@
- #define	_LIBUSB20_COMPAT_01_H_
- 
- #include <sys/param.h>
--#include <sys/endian.h>
-+#include <endian.h>
- 
- #include <stdint.h>
- 
 --- a/lib/libusb/Makefile
 +++ b/lib/libusb/Makefile
 @@ -19,7 +19,7 @@
