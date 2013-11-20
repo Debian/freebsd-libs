@@ -1,8 +1,10 @@
-freebsd-libs (9.2+ds1-7) UNRELEASED; urgency=low
+freebsd-libs (9.2+ds1-7) unstable; urgency=high
 
   * Remove unnecessary bits from 04_libkvm.diff and 12_usb.diff.
+  * Re-add libbsd_nlist.diff. It is still required when using kvm.h in
+    an external package.  (Closes: #729536)
 
- -- Robert Millan <rmh@debian.org>  Wed, 06 Nov 2013 11:29:34 +0100
+ -- Robert Millan <rmh@debian.org>  Thu, 14 Nov 2013 19:55:53 +0100
 
 freebsd-libs (9.2+ds1-6) unstable; urgency=low
 
