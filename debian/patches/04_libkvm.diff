@@ -8,119 +8,6 @@
  
  .if exists(${.CURDIR}/kvm_${MACHINE_ARCH}.c)
  KVM_ARCH=${MACHINE_ARCH}
---- a/lib/libkvm/kvm.c
-+++ b/lib/libkvm/kvm.c
-@@ -144,6 +144,7 @@
- _kvm_open(kvm_t *kd, const char *uf, const char *mf, int flag, char *errout)
- {
- 	struct stat st;
-+	static char name[MAXPATHLEN];
- 
- 	kd->vmfd = -1;
- 	kd->pmfd = -1;
-@@ -153,8 +154,17 @@
- 	kd->argspc = 0;
- 	kd->argv = 0;
- 
--	if (uf == 0)
--		uf = getbootfile();
-+	if (uf == 0) {
-+		size_t size = sizeof(name);
-+		int mib[2];
-+
-+		mib[0] = CTL_KERN;
-+		mib[1] = KERN_BOOTFILE;
-+		if (sysctl(mib, 2, name, &size, NULL, 0) == -1)
-+			strcpy(name, "/boot/kernel/kernel");
-+
-+		uf = name;
-+	}
- 	else if (strlen(uf) >= MAXPATHLEN) {
- 		_kvm_err(kd, kd->program, "exec file name too long");
- 		goto failed;
---- a/lib/libkvm/kvm_file.c
-+++ b/lib/libkvm/kvm_file.c
-@@ -59,7 +59,7 @@
- #include <sys/sysctl.h>
- 
- #include <limits.h>
--#include <ndbm.h>
-+#include <gdbm-ndbm.h>
- #include <paths.h>
- #include <stdlib.h>
- 
-@@ -78,6 +78,7 @@
- kvm_deadfiles(kvm_t *kd, int op __unused, int arg __unused, long allproc_o,
-     int nprocs __unused)
- {
-+#if 0
- 	struct proc proc;
- 	struct filedesc filed;
- 	int buflen = kd->arglen, ocnt = 0, n = 0, once = 0, i;
-@@ -149,6 +150,7 @@
- 	return (n);
- fail:
- 	free(ofiles);
-+#endif
- 	return (0);
- 	
- }
-@@ -161,6 +163,7 @@
- 
- 	_kvm_syserr(kd, kd->program, "kvm_getfiles has been broken for years");
- 	return (0);
-+#if 0
- 	if (ISALIVE(kd)) {
- 		size = 0;
- 		mib[0] = CTL_KERN;
-@@ -223,4 +226,6 @@
- 	}
- 	*cnt = nfiles;
- 	return (kd->argspc);
-+#endif
-+	return 0;
- }
---- a/lib/libkvm/kvm_getswapinfo.c
-+++ b/lib/libkvm/kvm_getswapinfo.c
-@@ -200,8 +200,10 @@
- 			swap_ary[unswdev].ksw_total = ttl;
- 			swap_ary[unswdev].ksw_used = xsd.xsw_used;
- 			swap_ary[unswdev].ksw_flags = xsd.xsw_flags;
-+#if 0
- 			GETSWDEVNAME(xsd.xsw_dev, swap_ary[unswdev].ksw_devname,
- 			     flags);
-+#endif
- 		}
- 		tot.ksw_total += ttl;
- 		tot.ksw_used += xsd.xsw_used;
---- a/lib/libkvm/kvm_proc.c
-+++ b/lib/libkvm/kvm_proc.c
-@@ -54,7 +54,7 @@
- #include <sys/_lock.h>
- #include <sys/_mutex.h>
- #include <sys/_task.h>
--#include <sys/cpuset.h>
-+
- #include <sys/user.h>
- #include <sys/proc.h>
- #define	_WANT_PRISON	/* make jail.h give us 'struct prison' */
-@@ -113,6 +113,7 @@
- kvm_proclist(kvm_t *kd, int what, int arg, struct proc *p,
-     struct kinfo_proc *bp, int maxcnt)
- {
-+#if 0
- 	int cnt = 0;
- 	struct kinfo_proc kinfo_proc, *kp;
- 	struct pgrp pgrp;
-@@ -439,6 +440,8 @@
- 		++cnt;
- 	}
- 	return (cnt);
-+#endif
-+	return -1;
- }
- 
- /*
 --- a/lib/libkvm/kvm_vnet.c
 +++ b/lib/libkvm/kvm_vnet.c
 @@ -68,18 +68,18 @@
@@ -149,3 +36,18 @@
  	};
  	uintptr_t procp, credp;
  #define	VMCORE_VNET_OF_PROC0
+--- a/lib/libkvm/kvm_proc.c
++++ b/lib/libkvm/kvm_proc.c
+@@ -387,6 +387,12 @@
+ 		kp->ki_runtime = cputick2usec(proc.p_rux.rux_runtime);
+ 		kp->ki_pid = proc.p_pid;
+ 		kp->ki_siglist = proc.p_siglist;
++#define SIGSETOR(set1, set2)                                            \
++        do {                                                            \
++                int __i;                                                \
++                for (__i = 0; __i < _SIG_WORDS; __i++)                  \
++                        (set1).__bits[__i] |= (set2).__bits[__i];       \
++        } while (0)
+ 		SIGSETOR(kp->ki_siglist, mtd.td_siglist);
+ 		kp->ki_sigmask = mtd.td_sigmask;
+ 		kp->ki_xstat = proc.p_xstat;

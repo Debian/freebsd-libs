@@ -1,3 +1,9 @@
+freebsd-libs (9.2+ds1-8) UNRELEASED; urgency=low
+
+  * Simplify 04_libkvm.diff even further.
+
+ -- Robert Millan <rmh@debian.org>  Sat, 23 Nov 2013 21:59:04 +0100
+
 freebsd-libs (9.2+ds1-7) unstable; urgency=high
 
   * Remove unnecessary bits from 04_libkvm.diff and 12_usb.diff.
