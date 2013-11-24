@@ -1,8 +1,9 @@
 freebsd-libs (9.2+ds1-8) UNRELEASED; urgency=low
 
   * Simplify 04_libkvm.diff even further.
+  * Remove gratuitous header dependencies.
 
- -- Robert Millan <rmh@debian.org>  Sat, 23 Nov 2013 21:59:04 +0100
+ -- Robert Millan <rmh@debian.org>  Sun, 24 Nov 2013 13:17:53 +0100
 
 freebsd-libs (9.2+ds1-7) unstable; urgency=high
 

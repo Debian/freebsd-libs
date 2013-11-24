@@ -91,7 +91,7 @@ Description: FreeBSD CAM (Common Access Method) library
 Package: libcam-dev
 Section: libdevel
 Architecture: kfreebsd-any
-Depends: libcam6 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev, libbsd-dev
+Depends: libcam6 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev,
 Description: Development files for libcam
  This package contains the header files and static library needed to
  compile applications that use libcam.
@@ -106,7 +106,7 @@ Description: FreeBSD GEOM library
 Package: libgeom-dev
 Section: libdevel
 Architecture: kfreebsd-any
-Depends: libgeom1 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev, libbsd-dev
+Depends: libgeom1 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev,
 Description: Development files for libgeom
  This package contains the header files and static library needed to
  compile applications that use libgeom.
@@ -147,7 +147,7 @@ Description: Common files for the USB HID devices FreeBSD library
 Package: libusbhid-dev
 Section: libdevel
 Architecture: kfreebsd-any
-Depends: libusbhid4debian (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev, libbsd-dev
+Depends: libusbhid4debian (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev,
 Description: Development files for libusbhid
  This package contains the header files and static library needed to
  compile applications that use libusbhid.
@@ -162,7 +162,7 @@ Description: FreeBSD userspace USB programming library
 Package: libusb2-dev
 Section: libdevel
 Architecture: kfreebsd-any
-Depends: libusb2debian (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev, libbsd-dev
+Depends: libusb2debian (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev,
 Provides: libusb-1.0-0-dev
 Conflicts: libusb-dev
 Description: Development files for libusb2
@@ -210,7 +210,6 @@ Package: libdevstat-dev
 Section: libdevel
 Architecture: kfreebsd-any
 Depends: libdevstat7 (= ${binary:Version}), ${misc:Depends}, libkvm-dev, libc0.1-dev | libc-dev,
- libbsd-dev
 Description: Development files for libdevstat
  This package contains the header files and static library needed to
  compile applications that use libdevstat.
@@ -226,7 +225,6 @@ Package: libmemstat-dev
 Section: libdevel
 Architecture: kfreebsd-any
 Depends: libmemstat3 (= ${binary:Version}), ${misc:Depends}, libkvm-dev, libc0.1-dev | libc-dev,
- libbsd-dev
 Description: Development files for libmemstat
  This package contains the header files and static library needed to
  compile applications that use libmemstat.
@@ -241,7 +239,7 @@ Description: FreeBSD netgraph (kernel interface) library
 Package: libnetgraph-dev
 Section: libdevel
 Architecture: kfreebsd-any
-Depends: libnetgraph4 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev, libbsd-dev
+Depends: libnetgraph4 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev,
 Description: Development files for libnetgraph
  This package contains the header files and static library needed to
  compile applications that use libnetgraph.
