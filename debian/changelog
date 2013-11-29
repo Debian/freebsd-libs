@@ -2,6 +2,7 @@ freebsd-libs (9.2+ds1-8) UNRELEASED; urgency=low
 
   * Simplify 04_libkvm.diff even further.
   * Remove gratuitous header dependencies.
+  * Remove 07_libkiconv.diff (obsolete).
 
  -- Robert Millan <rmh@debian.org>  Sun, 24 Nov 2013 13:17:53 +0100
 

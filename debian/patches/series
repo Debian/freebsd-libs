@@ -10,7 +10,6 @@ cdefs_macros.diff
 04_libkvm.diff
 05_libipx.diff
 06_libgeom.diff
-07_libkiconv.diff
 08_libdevstat.diff
 09_libusbhid.diff
 10_memstat.diff
