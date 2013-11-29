@@ -1,13 +1,3 @@
---- a/lib/libkvm/Makefile
-+++ b/lib/libkvm/Makefile
-@@ -4,6 +4,7 @@
- LIB=	kvm
- SHLIBDIR?= /lib
- CFLAGS+=-DLIBC_SCCS -I${.CURDIR}
-+LDADD= -lbsd
- 
- .if exists(${.CURDIR}/kvm_${MACHINE_ARCH}.c)
- KVM_ARCH=${MACHINE_ARCH}
 --- a/lib/libkvm/kvm_vnet.c
 +++ b/lib/libkvm/kvm_vnet.c
 @@ -68,18 +68,18 @@

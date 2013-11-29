@@ -27,3 +27,4 @@ elf.diff
 # Patches that are likely to be Debian-specific
 libusb_pthread_condattr_setclock.diff
 libbsd_nlist.diff
+makefiles.diff
