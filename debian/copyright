@@ -432,3 +432,125 @@ Licenses:
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
     THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
     OF SUCH DAMAGE.
+
+
+Files: lib/libutil/_secure_path.c
+ lib/libutil/login_auth.c
+ lib/libutil/login_cap.c
+ lib/libutil/login_cap.h
+ lib/libutil/login_class.c
+ lib/libutil/login_ok.c
+ lib/libutil/login_times.c
+Copyright: 1995,1997, by Berkeley Software Design, Inc.
+  1996, by Sean Eric Fagan <sef@kithrup.com> and David Nugent <davidn@blaze.net.au>
+License: BSD (5 clause)
+
+Files: lib/libutil/login_tty.c
+ lib/libutil/pty.c
+ lib/libutil/uucplock.c
+Copyright: 1988, 1990, 1993-1994, The Regents of the University of California
+License: BSD (3 clause)
+
+Files: lib/libutil/login_tty.3
+ lib/libutil/pty.3
+Copyright: 1996, Joerg Wunsch
+License: BSD (2 clause)
+
+Files: lib/libutil/auth.c
+ lib/libutil/property.c
+Copyright: 1998, Jordan Hubbard
+License: BSD (2 clause)
+
+Files: lib/libutil/login_crypt.c
+ lib/libutil/stub.c
+Copyright: 2000, Brian Fundakowski Feldman
+License: BSD (2 clause)
+
+Files: lib/libutil/realhostname.c
+ lib/libutil/trimdomain.c
+ lib/libutil/realhostname.3
+ lib/libutil/trimdomain.3
+Copyright: 1999, 2001, Brian Somers <brian@Awfulhak.org>
+License: BSD (2 clause)
+
+Files: lib/libutil/flopen.c
+ lib/libutil/kld.c
+ lib/libutil/flopen.3
+ lib/libutil/kld.3
+Copyright: 2006, 2007, Dag-Erling Coïdan Smørgrav
+License: BSD (2 clause)
+
+Files: lib/libutil/kinfo_getfile.3
+ lib/libutil/kinfo_getvmmap.3
+Copyright: 2008, Peter Wemm
+License: BSD (2 clause)
+
+Files: lib/libutil/quotafile.c
+Copyright: 2008, Dag-Erling Coïdan Smørgrav
+  2008, Marshall Kirk McKusick
+License: BSD (2 clause)
+
+Files: lib/libutil/expand_number.c
+Copyright: 2007, Eric Anderson <anderson@FreeBSD.org>
+  2007, Pawel Jakub Dawidek <pjd@FreeBSD.org>
+License: BSD (2 clause)
+
+Files: lib/libutil/pidfile.c
+Copyright: 2005, Pawel Jakub Dawidek <pjd@FreeBSD.org>
+License: BSD (2 clause)
+
+Files: lib/libutil/kinfo_getallproc.c
+Copyright: 2007, Robert N. M. Watson
+  2009, Ulf Lilleengen
+License: BSD (2 clause)
+
+Files: lib/libutil/kinfo_getallproc.3
+ lib/libutil/kinfo_getproc.c
+ lib/libutil/kinfo_getproc.3
+Copyright: 2009, Ulf Lilleengen
+License: BSD (2 clause)
+
+Files: lib/libutil/gr_util.c
+Copyright: 2008, Sean C. Farley <scf@FreeBSD.org>
+License: BSD (2 clause)
+
+Files: lib/libutil/humanize_number.c
+Copyright: 1997-1999, 2002 The NetBSD Foundation, Inc
+License: BSD (2 clause)
+
+Files: lib/libutil/pw_util.c
+Copyright: 1990, 1993-1994,
+  2002, Networks Associates Technology, Inc
+License: BSD (3 clause)
+
+Files: lib/libutil/hexdump.c
+Copyright: 1986, 1988, 1991, 1993
+  UNIX System Laboratories, Inc
+License: BSD (3 clause)
+
+Files: lib/libutil/libutil.h
+Copyright: 1996, Peter Wemm <peter@FreeBSD.org>
+  2002, Networks Associates Technology, Inc
+License: BSD (3 clause)
+
+Files: lib/libutil/fparseln.c
+Copyright: 1997, Christos Zoulas.
+License: BSD (4 clause)
+
+
+
+License: BSD (5 clause)
+ * Redistribution and use in source and binary forms, with or without
+ * modification, is permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice immediately at the beginning of the file, without modification,
+ *    this list of conditions, and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. This work was done expressly for inclusion into FreeBSD.  Other use
+ *    is permitted provided this notation is included.
+ * 4. Absolutely no warranty of function or purpose is made by the authors.
+ * 5. Modifications may be freely made to this file providing the above
+ *    conditions are met.

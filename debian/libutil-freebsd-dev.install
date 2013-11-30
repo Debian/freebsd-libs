@@ -1,0 +1,4 @@
+usr/lib/libutil-freebsd.a
+usr/lib/libutil-freebsd*.so
+usr/include/libutil.h
+usr/include/login_cap.h

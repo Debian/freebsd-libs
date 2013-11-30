@@ -1,0 +1,12 @@
+--- a/lib/libutil/login_class.c
++++ b/lib/libutil/login_class.c
+@@ -47,6 +47,9 @@
+ #include <syslog.h>
+ #include <unistd.h>
+ 
++#define RLIMIT_VMEM RLIMIT_AS
++#define RLIMIT_NPTS 11
++#define RLIMIT_SWAP 12
+ 
+ static struct login_res {
+     const char *what;

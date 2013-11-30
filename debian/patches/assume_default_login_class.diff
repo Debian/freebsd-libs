@@ -1,0 +1,13 @@
+
+We don't have this feature. See login.conf(5)
+
+--- a/lib/libutil/login_cap.c
++++ b/lib/libutil/login_cap.c
+@@ -324,7 +324,6 @@
+     const char	*cls = NULL;
+ 
+     if (pwd != NULL) {
+-	cls = pwd->pw_class;
+ 	if (cls == NULL || *cls == '\0')
+ 	    cls = (pwd->pw_uid == 0) ? LOGIN_DEFROOTCLASS : LOGIN_DEFCLASS;
+     }

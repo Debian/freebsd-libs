@@ -53,6 +53,7 @@ get-orig-source:
 	         lib/libkiconv lib/libnetgraph lib/libjail \
 	         lib/libkvm lib/libmemstat lib/libsbuf lib/libusb \
 	         lib/libusbhid sys/cam \
+		lib/libutil \
 		lib/libalias sys/netinet/libalias sys/modules/libalias \
 	         sys/kern/subr_sbuf.c \
 	         sys/sys/sbuf.h \
@@ -74,6 +75,7 @@ BUILD_ARCH_TARGETS = \
 	build-sbuf \
 	build-dwarf \
 	build-elf \
+	build-util \
 	$(NULL)
 
 ifeq ($(kernel), kfreebsd)
@@ -161,6 +163,11 @@ build-usb-stamp:
 	$(PMAKE) -C $(CURDIR)/lib/libusb SHLIBDIR=./
 	touch $@
 
+build-util: build-util-stamp
+build-util-stamp:
+	$(PMAKE) -C $(CURDIR)/lib/libutil SHLIBDIR=./
+	touch $@
+
 build-jail: build-jail-stamp
 build-jail-stamp:
 	$(PMAKE) -C $(CURDIR)/lib/libjail SHLIBDIR=./
@@ -177,6 +184,7 @@ clean:
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf clean
 	$(PMAKE) -C $(CURDIR)/lib/libdwarf clean
 	$(PMAKE) -C $(CURDIR)/lib/libelf clean
+	$(PMAKE) -C $(CURDIR)/lib/libutil clean
 ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libcam clean
 	$(PMAKE) -C $(CURDIR)/lib/libnetgraph clean
@@ -213,6 +221,7 @@ install-arch: build-arch
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf install SHLIBDIR=/lib
 	$(PMAKE) -C $(CURDIR)/lib/libdwarf install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libelf install SHLIBDIR=/usr/lib
+	$(PMAKE) -C $(CURDIR)/lib/libutil install SHLIBDIR=/lib
 ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libcam install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libgeom install SHLIBDIR=/lib
