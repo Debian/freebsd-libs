@@ -1,3 +1,9 @@
+freebsd-libs (9.2+ds2-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Robert Millan <rmh@debian.org>  Sun, 01 Dec 2013 12:46:21 +0100
+
 freebsd-libs (9.2+ds2-1) experimental; urgency=low
 
   * Add libutil.
