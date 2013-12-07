@@ -1,6 +1,7 @@
 freebsd-libs (9.2+ds2-3) UNRELEASED; urgency=low
 
   * Fetch source code securely (https) in get-orig-source.
+  * Leave -lbsdxml untouched (latest freebsd-glue supports it).
 
  -- Robert Millan <rmh@debian.org>  Sat, 07 Dec 2013 23:22:56 +0100
 
