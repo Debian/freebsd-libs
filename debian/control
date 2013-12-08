@@ -260,14 +260,14 @@ Description: Development files for libnetgraph
  compile applications that use libnetgraph.
 
 Package: libipx2
-Architecture: kfreebsd-any
+Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: FreeBSD IPX address conversion support library
  The IPX library provides a set of routune to convert IPX addresses.
 
 Package: libipx-dev
 Section: libdevel
-Architecture: kfreebsd-any
+Architecture: any
 Depends: libipx2 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev
 Description: Development files for libipx
  This package contains the header files and static library needed to

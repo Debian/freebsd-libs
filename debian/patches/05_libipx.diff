@@ -1,9 +1,7 @@
----
- lib/libipx/Makefile |    1 +
- 1 file changed, 1 insertion(+)
-
---- a/lib/libipx/Makefile
-+++ b/lib/libipx/Makefile
+Index: freebsd-libs-9.2+ds2/lib/libipx/Makefile
+===================================================================
+--- freebsd-libs-9.2+ds2.orig/lib/libipx/Makefile	2013-12-08 23:43:09.353946412 +0100
++++ freebsd-libs-9.2+ds2/lib/libipx/Makefile	2013-12-08 23:48:44.000000000 +0100
 @@ -1,6 +1,7 @@
  # $FreeBSD$
  
@@ -12,3 +10,24 @@
  SHLIBDIR?= /lib
  SRCS=	ipx_addr.c ipx_ntoa.c
  MAN=	ipx.3
+Index: freebsd-libs-9.2+ds2/sys/netipx/ipx.h
+===================================================================
+--- freebsd-libs-9.2+ds2.orig/sys/netipx/ipx.h	2007-06-13 16:01:43.000000000 +0200
++++ freebsd-libs-9.2+ds2/sys/netipx/ipx.h	2013-12-08 23:50:47.489929732 +0100
+@@ -146,6 +146,7 @@
+ 	u_short		x_port;
+ };
+ 
++#ifdef __FreeBSD_kernel__
+ /*
+  * Socket address
+  */
+@@ -156,6 +157,8 @@
+ 	char		sipx_zero[2];
+ };
+ #define sipx_port sipx_addr.x_port
++#endif
++
+ 
+ /*
+  * Definitions for IPX Internetwork Packet Exchange Protocol

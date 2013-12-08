@@ -57,6 +57,7 @@ get-orig-source:
 		lib/libalias sys/netinet/libalias sys/modules/libalias \
 	         sys/kern/subr_sbuf.c \
 	         sys/sys/sbuf.h \
+		sys/netipx/ipx.h \
 	         share/misc/usb_hid_usages ; do \
 	    svn export $(SVN)/$$i $(ORIGDIR)/$$i ; \
 	done
@@ -76,13 +77,13 @@ BUILD_ARCH_TARGETS = \
 	build-dwarf \
 	build-elf \
 	build-util \
+	build-ipx \
 	$(NULL)
 
 ifeq ($(kernel), kfreebsd)
 BUILD_ARCH_TARGETS += \
 	build-cam \
 	build-geom \
-	build-ipx \
 	build-kiconv \
 	build-kvm \
 	build-usbhid \
@@ -222,10 +223,10 @@ install-arch: build-arch
 	$(PMAKE) -C $(CURDIR)/lib/libdwarf install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libelf install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libutil install SHLIBDIR=/lib
+	$(PMAKE) -C $(CURDIR)/lib/libipx install SHLIBDIR=/lib
 ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libcam install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libgeom install SHLIBDIR=/lib
-	$(PMAKE) -C $(CURDIR)/lib/libipx install SHLIBDIR=/lib
 	$(PMAKE) -C $(CURDIR)/lib/libkiconv install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libkvm install SHLIBDIR=/lib
 	$(PMAKE) -C $(CURDIR)/lib/libdevstat install SHLIBDIR=/usr/lib
