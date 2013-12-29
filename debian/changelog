@@ -3,6 +3,7 @@ freebsd-libs (9.2+ds3-1) UNRELEASED; urgency=low
   * Fetch source code securely (https) in get-orig-source.
   * Leave -lbsdxml untouched (latest freebsd-glue supports it).
   * Make libipx available on all architectures.
+  * Correctly setup BSD version of MAKEFLAGS to support parallel builds.
 
  -- Robert Millan <rmh@debian.org>  Sat, 07 Dec 2013 23:22:56 +0100
 
