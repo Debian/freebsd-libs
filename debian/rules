@@ -46,7 +46,8 @@ get-orig-source:
 	rm -rf $(ORIGDIR)
 	mkdir -p $(ORIGDIR)/share/misc
 	mkdir -p $(ORIGDIR)/sys/kern
-	mkdir -p $(ORIGDIR)/sys/sys
+	mkdir -p $(ORIGDIR)/sys/sys \
+		$(ORIGDIR)/sys/netipx
 	for i in lib/libcam lib/libdevstat lib/libgeom lib/libipx \
 		lib/libelf \
 		lib/libdwarf \

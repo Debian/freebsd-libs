@@ -48,10 +48,8 @@
  CFLAGS+= -DLIBC_SCCS
  
  .if ${MK_INET6_SUPPORT} != "no"
-Index: freebsd-libs-9.2+ds2/lib/libkvm/Makefile
-===================================================================
---- freebsd-libs-9.2+ds2.orig/lib/libkvm/Makefile	2013-12-08 23:51:03.057927202 +0100
-+++ freebsd-libs-9.2+ds2/lib/libkvm/Makefile	2013-12-08 23:51:03.033927203 +0100
+--- a/lib/libkvm/Makefile
++++ b/lib/libkvm/Makefile
 @@ -4,6 +4,7 @@
  LIB=	kvm
  SHLIBDIR?= /lib
@@ -60,10 +58,8 @@ Index: freebsd-libs-9.2+ds2/lib/libkvm/Makefile
  
  .if exists(${.CURDIR}/kvm_${MACHINE_ARCH}.c)
  KVM_ARCH=${MACHINE_ARCH}
-Index: freebsd-libs-9.2+ds2/lib/libipx/Makefile
-===================================================================
---- freebsd-libs-9.2+ds2.orig/lib/libipx/Makefile	2013-12-08 23:51:03.057927202 +0100
-+++ freebsd-libs-9.2+ds2/lib/libipx/Makefile	2013-12-08 23:51:35.729926664 +0100
+--- a/lib/libipx/Makefile
++++ b/lib/libipx/Makefile
 @@ -7,6 +7,10 @@
  MAN=	ipx.3
  MLINKS+=ipx.3 ipx_addr.3 ipx.3 ipx_ntoa.3
