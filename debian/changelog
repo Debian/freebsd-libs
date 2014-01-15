@@ -1,4 +1,4 @@
-freebsd-libs (10.0-1) UNRELEASED; urgency=low
+freebsd-libs (10.0-1) experimental; urgency=low
 
   * New upstream release.
     - Refresh all patches.
@@ -14,7 +14,7 @@ freebsd-libs (10.0-1) UNRELEASED; urgency=low
   * Make libipx available on all architectures.
   * Correctly setup BSD version of MAKEFLAGS to support parallel builds.
 
- -- Robert Millan <rmh@debian.org>  Wed, 15 Jan 2014 16:21:42 +0100
+ -- Robert Millan <rmh@debian.org>  Wed, 15 Jan 2014 17:40:16 +0100
 
 freebsd-libs (9.2+ds2-2) unstable; urgency=low
 
