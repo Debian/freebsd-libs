@@ -12,7 +12,7 @@ export DH_OPTIONS
 
 full_version	:= $(shell dpkg-parsechangelog | grep ^Version: | sed -e 's/^.*: //g')
 tar_version	:= $(shell echo $(full_version) | sed -e 's/-.*//g')
-svn_revision	:= $(shell echo $(full_version) | sed -e 's/.*~svn\([0-9]*\)-[0-9]*/\1/g')
+svn_revision	:= $(shell echo $(full_version) | sed -e 's/.*~svn\([0-9]*\)-[0-9]*/\1/g' -e 's/^$(full_version)$$/HEAD/g')
 version		:= $(shell echo $(full_version) | sed -e 's/[~+-].*//g')
 major		:= $(shell echo $(version) | sed -e 's/\..*//g')
 revision	:= $(shell echo $(full_version) | sed -e 's/^[^+-]*//g')
@@ -69,7 +69,7 @@ get-orig-source:
 	         sys/sys/sbuf.h \
 		sys/netipx/ipx.h \
 	         share/misc/usb_hid_usages ; do \
-	    svn export $(SVN)/$$i $(ORIGDIR)/$$i ; \
+	    svn export -r $(svn_revision) $(SVN)/$$i $(ORIGDIR)/$$i ; \
 	done
 	# Remove unused files with non GPL compatible license (eg BSD 4 clauses)
 	rm -f $(ORIGDIR)/sys/cam/scsi/scsi_ch.*
@@ -291,7 +291,7 @@ ifeq ($(kernel), kfreebsd)
 	dh_makeshlibs -plibgeom1 --add-udeb=libgeom1-udeb
 	dh_makeshlibs -plibipx2 --add-udeb=libipx2-udeb
 	dh_makeshlibs -plibsbuf6 --add-udeb=libsbuf6-udeb
-	dh_makeshlibs -plibusb2debian --add-udeb=libusb2debian-udeb
+	dh_makeshlibs -plibusb3 --add-udeb=libusb3-udeb
 endif
 	dh_installdeb -a
 	dh_shlibdeps -a

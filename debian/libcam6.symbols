@@ -21,6 +21,7 @@ libcam.so.6 libcam6 #MINVER#
  ata_pm_read_cmd@Base 8.2
  ata_pm_write_cmd@Base 8.2
  ata_print_ident@Base 8.2
+ ata_print_ident_short@Base 10.0
  ata_res_sbuf@Base 8.2
  ata_res_string@Base 8.2
  ata_reset_cmd@Base 8.2
@@ -110,6 +111,7 @@ libcam.so.6 libcam6 #MINVER#
  scsi_prevent@Base 7.0
  scsi_progress_sbuf@Base 9.0
  scsi_print_inquiry@Base 7.0
+ scsi_print_inquiry_short@Base 10.0
  scsi_read_block_limits@Base 7.0
  scsi_read_buffer@Base 9.1
  scsi_read_capacity@Base 7.0
@@ -123,6 +125,7 @@ libcam.so.6 libcam6 #MINVER#
  scsi_reserve_release_unit@Base 7.0
  scsi_rewind@Base 7.0
  scsi_sa_read_write@Base 7.0
+ scsi_sanitize@Base 10.0
  scsi_send_diagnostic@Base 9.0
  scsi_sense_block_sbuf@Base 9.0
  scsi_sense_command_sbuf@Base 9.0
@@ -157,6 +160,7 @@ libcam.so.6 libcam6 #MINVER#
  scsi_write_filemarks@Base 7.0
  scsi_write_same@Base 9.1
  semb_print_ident@Base 9.1
+ semb_print_ident_short@Base 10.0
  semb_read_buffer@Base 9.1
  semb_receive_diagnostic_results@Base 9.1
  semb_send_diagnostic@Base 9.1

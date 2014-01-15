@@ -1,9 +1,11 @@
 libutil-freebsd.so.9 libutil-freebsd-9 #MINVER#
  _secure_path@Base 9.2
+ auth_getval@Base 10.0
  crypt_set_format@Base 9.2
  expand_number@Base 9.2
  flopen@Base 9.2
  fparseln@Base 9.2
+ gr_add@Base 10.0
  gr_copy@Base 9.2
  gr_dup@Base 9.2
  gr_equal@Base 9.2

@@ -1,11 +1,20 @@
-freebsd-libs (9.2+ds3-1) UNRELEASED; urgency=low
+freebsd-libs (10.0-1) UNRELEASED; urgency=low
 
+  * New upstream release.
+    - Refresh all patches.
+    - Remove missing_static_decl.diff (merged).
+    - Bump SONAME in libusb (2debian -> 3) and libkvm (0 -> 6).
+    - Update symbol list in libcam, libkvm, libusb and libutil.
+    - B-D on freebsd-mk (>= 10.0-2~) and kfreebsd-kernel-headers
+      (>= 10.0~2).
+
+  [ Robert Millan ]
   * Fetch source code securely (https) in get-orig-source.
   * Leave -lbsdxml untouched (latest freebsd-glue supports it).
   * Make libipx available on all architectures.
   * Correctly setup BSD version of MAKEFLAGS to support parallel builds.
 
- -- Robert Millan <rmh@debian.org>  Sat, 07 Dec 2013 23:22:56 +0100
+ -- Robert Millan <rmh@debian.org>  Wed, 15 Jan 2014 16:21:42 +0100
 
 freebsd-libs (9.2+ds2-2) unstable; urgency=low
 

@@ -1,8 +1,8 @@
 --- a/lib/libusb/libusb10.c
 +++ b/lib/libusb/libusb10.c
-@@ -37,6 +37,11 @@
- #include <stdlib.h>
- #include <unistd.h>
+@@ -43,6 +43,11 @@
+ #include <sys/endian.h>
+ #endif
  
 +/* Set the clock selected for the conditon variable attribute ATTR.  */
 +extern int pthread_condattr_setclock (pthread_condattr_t *__attr,

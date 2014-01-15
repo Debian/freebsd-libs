@@ -1,4 +1,4 @@
-libusb.so.2debian libusb2debian #MINVER#
+libusb.so.3 libusb3 #MINVER#
  LIBUSB20_BOS_DESCRIPTOR_FORMAT@Base 9.1
  LIBUSB20_CONFIG_DESC_FORMAT@Base 7.1
  LIBUSB20_CONTROL_SETUP_FORMAT@Base 7.1
@@ -42,6 +42,7 @@ libusb.so.2debian libusb2debian #MINVER#
  libusb20_dev_get_mode@Base 7.1
  libusb20_dev_get_parent_address@Base 8.3~
  libusb20_dev_get_parent_port@Base 8.3~
+ libusb20_dev_get_port_path@Base 10.0
  libusb20_dev_get_power_mode@Base 7.1
  libusb20_dev_get_power_usage@Base 9.2
  libusb20_dev_get_speed@Base 7.1
@@ -81,6 +82,7 @@ libusb.so.2debian libusb2debian #MINVER#
  libusb20_tr_get_status@Base 7.1
  libusb20_tr_get_time_complete@Base 7.1
  libusb20_tr_open@Base 7.1
+ libusb20_tr_open_stream@Base 10.0
  libusb20_tr_pending@Base 7.1
  libusb20_tr_set_buffer@Base 7.1
  libusb20_tr_set_callback@Base 7.1
@@ -145,6 +147,9 @@ libusb.so.2debian libusb2debian #MINVER#
  libusb_get_max_packet_size@Base 7.1
  libusb_get_next_timeout@Base 7.1
  libusb_get_pollfds@Base 7.1
+ libusb_get_port_numbers@Base 10.0
+ libusb_get_port_path@Base 10.0
+ libusb_get_string_descriptor@Base 10.0
  libusb_get_string_descriptor_ascii@Base 7.1
  libusb_handle_events@Base 7.1
  libusb_handle_events_locked@Base 7.1

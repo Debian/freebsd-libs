@@ -1,5 +1,6 @@
-libkvm.so.0 libkvm0 #MINVER#
+libkvm.so.6 libkvm6 #MINVER#
  kvm_close@Base 7.0
+ kvm_counter_u64_fetch@Base 10.0
  kvm_dpcpu_setcpu@Base 8.3~
  kvm_getargv@Base 7.0
  kvm_getcptime@Base 7.1
@@ -15,7 +16,7 @@ libkvm.so.0 libkvm0 #MINVER#
  kvm_open@Base 7.0
  kvm_openfiles@Base 7.0
  kvm_read@Base 7.0
- kvm_uread@Base 7.0
+ kvm_read_zpcpu@Base 10.0
  kvm_write@Base 7.0
  (optional)_kvm_dpcpu_initialized@Base 8.3~
  (optional)_kvm_dpcpu_validaddr@Base 8.3~
