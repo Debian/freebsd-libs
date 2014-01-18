@@ -45,10 +45,18 @@ TARNAME = $(SOURCE)_$(tar_version).orig.tar.gz
 
 PATH := /usr/lib/freebsd:$(PATH)
 DESTDIR = $(CURDIR)/debian/tmp
-PMAKE = \
+CFLAGS += -I$(CURDIR)/debian/local/include
+PMAKE_COMMON = \
 	MAKEFLAGS=$(BSD_MAKEFLAGS) \
-	COPTS="$(CFLAGS)" CFLAGS="$(CFLAGS) -I$(CURDIR)/debian/local/include" NO_WERROR=1 NOGCCERROR=1 \
+	NO_WERROR=1 NOGCCERROR=1 \
         NOSHARED=NO NO_SHARED=NO NO_PROFILE=1 DESTDIR=$(DESTDIR) make
+PMAKE = \
+	CFLAGS="$(CFLAGS)" \
+	$(PMAKE_COMMON)
+PMAKE_FOREIGN = \
+	CFLAGS="$(CFLAGS) -D__FREEBSD_GLUE_USE_EMBEDDED_HEADERS" \
+	$(PMAKE_COMMON)
+
 kernel = $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 
 get-orig-source:
@@ -146,12 +154,12 @@ build-devstat-stamp: build-kvm
 
 build-elf: build-elf-stamp
 build-elf-stamp:
-	$(PMAKE) -C $(CURDIR)/lib/libelf SHLIBDIR=./
+	$(PMAKE_FOREIGN) -C $(CURDIR)/lib/libelf SHLIBDIR=./
 	touch $@
 
 build-dwarf: build-dwarf-stamp
 build-dwarf-stamp: build-elf
-	$(PMAKE) -C $(CURDIR)/lib/libdwarf SHLIBDIR=./
+	$(PMAKE_FOREIGN) -C $(CURDIR)/lib/libdwarf SHLIBDIR=./
 	touch $@
 
 build-memstat: build-memstat-stamp
@@ -161,7 +169,7 @@ build-memstat-stamp: build-kvm
 
 build-sbuf: build-sbuf-stamp
 build-sbuf-stamp:
-	$(PMAKE) -C $(CURDIR)/lib/libsbuf SHLIBDIR=./
+	$(PMAKE_FOREIGN) -C $(CURDIR)/lib/libsbuf SHLIBDIR=./
 	touch $@
 
 build-usbhid: build-usbhid-stamp
