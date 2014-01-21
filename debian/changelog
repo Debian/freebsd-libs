@@ -2,6 +2,7 @@ freebsd-libs (10.0-2) UNRELEASED; urgency=low
 
   * Improve detection of FTBFS problems on foreign platforms by passing
     __FREEBSD_GLUE_USE_EMBEDDED_HEADERS flag to freebsd-glue.
+  * Switch to bmake to follow upstream.
 
  -- Robert Millan <rmh@debian.org>  Sat, 18 Jan 2014 01:18:08 +0100
 
