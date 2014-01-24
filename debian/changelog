@@ -4,6 +4,7 @@ freebsd-libs (10.0-2) UNRELEASED; urgency=low
     __FREEBSD_GLUE_USE_EMBEDDED_HEADERS flag to freebsd-glue.
   * Switch to bmake to follow upstream.
   * Fix Dwarf_Off size on i386-linux-gnu.
+  * Bump freebsd-glue B-D to 0.2.18 (for PATH_MAX).
 
  -- Robert Millan <rmh@debian.org>  Sat, 18 Jan 2014 01:18:08 +0100
 
