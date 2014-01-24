@@ -1,0 +1,15 @@
+
+We can't use -D_FILE_OFFSET_BITS=64 here, as
+libdwarf.h is a public header.
+
+--- a/lib/libdwarf/libdwarf.h
++++ b/lib/libdwarf/libdwarf.h
+@@ -32,7 +32,7 @@
+ #include <libelf.h>
+ 
+ typedef int		Dwarf_Bool;
+-typedef off_t		Dwarf_Off;
++typedef __off64_t	Dwarf_Off;
+ typedef uint64_t	Dwarf_Unsigned;
+ typedef uint16_t	Dwarf_Half;
+ typedef uint8_t		Dwarf_Small;
