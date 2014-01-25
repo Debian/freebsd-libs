@@ -49,7 +49,10 @@ CFLAGS += -I$(CURDIR)/debian/local/include
 PMAKE_COMMON = \
 	MAKEFLAGS=$(BSD_MAKEFLAGS) \
 	NO_WERROR=1 NOGCCERROR=1 \
-        NOSHARED=NO NO_SHARED=NO NO_PROFILE=1 DESTDIR=$(DESTDIR) bmake
+        NOSHARED=NO NO_SHARED=NO NO_PROFILE=1 DESTDIR=$(DESTDIR) \
+	bmake \
+	SHLIB_MAJOR=0 \
+	$(NULL)
 PMAKE = \
 	CFLAGS="$(CFLAGS)" \
 	$(PMAKE_COMMON)
@@ -73,6 +76,7 @@ get-orig-source:
 	         lib/libusbhid sys/cam \
 		lib/libutil \
 		lib/libalias sys/netinet/libalias sys/modules/libalias \
+		lib/Makefile.inc \
 	         sys/kern/subr_sbuf.c \
 	         sys/sys/sbuf.h \
 		sys/netipx/ipx.h \

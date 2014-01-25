@@ -1,4 +1,5 @@
 # Patches from (or merged in) upstream
+svn_HEAD_Makefile.inc.diff
 
 # Patches that are in good shape for merging upstream
 
@@ -15,7 +16,6 @@ cdefs_macros.diff
 12_usb.diff
 13_jail.diff
 14_alias.diff
-makefile_inc.diff
 sysconf_cpuset_size.diff
 libusb_backward.diff
 kvm_size_t_kludge.diff
