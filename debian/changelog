@@ -1,9 +1,9 @@
-freebsd-libs (10.0-3) UNRELEASED; urgency=low
+freebsd-libs (10.0-3) experimental; urgency=low
 
   * Add missing B-D on m4.
   * Prepare Makefile.inc to be moved into orig tarball.
 
- -- Robert Millan <rmh@debian.org>  Sat, 25 Jan 2014 23:09:11 +0100
+ -- Robert Millan <rmh@debian.org>  Sat, 25 Jan 2014 23:51:42 +0100
 
 freebsd-libs (10.0-2) experimental; urgency=low
 
