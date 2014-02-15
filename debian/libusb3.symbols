@@ -152,8 +152,10 @@ libusb.so.3 libusb3 #MINVER#
  libusb_get_string_descriptor@Base 10.0
  libusb_get_string_descriptor_ascii@Base 7.1
  libusb_handle_events@Base 7.1
+ libusb_handle_events_completed@Base 10.0-4~
  libusb_handle_events_locked@Base 7.1
  libusb_handle_events_timeout@Base 7.1
+ libusb_handle_events_timeout_completed@Base 10.0-4~
  libusb_init@Base 7.1
  libusb_interrupt_transfer@Base 7.1
  libusb_kernel_driver_active@Base 7.1
