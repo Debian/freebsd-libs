@@ -1,3 +1,9 @@
+freebsd-libs (10.0-5) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Robert Millan <rmh@debian.org>  Sat, 22 Mar 2014 20:39:25 +0100
+
 freebsd-libs (10.0-4) experimental; urgency=low
 
   * libusb_handle_events_completed.diff: Cherry-pick from upstream
