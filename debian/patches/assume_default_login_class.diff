@@ -1,9 +1,11 @@
 
 We don't have this feature. See login.conf(5)
 
---- a/lib/libutil/login_cap.c
-+++ b/lib/libutil/login_cap.c
-@@ -324,7 +324,6 @@
+Index: freebsd-libs/lib/libutil/login_cap.c
+===================================================================
+--- freebsd-libs.orig/lib/libutil/login_cap.c
++++ freebsd-libs/lib/libutil/login_cap.c
+@@ -324,7 +324,6 @@ login_getpwclass(const struct passwd *pw
      const char	*cls = NULL;
  
      if (pwd != NULL) {

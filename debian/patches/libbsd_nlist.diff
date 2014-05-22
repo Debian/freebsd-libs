@@ -3,12 +3,14 @@ This patch is not required for build, because freebsd-glue provides
 <nlist.h>, however it is still required when using kvm.h in an external
 package. See #729536.
 
---- a/lib/libkvm/kvm.h
-+++ b/lib/libkvm/kvm.h
-@@ -35,7 +35,7 @@
- 
+Index: freebsd-libs/lib/libkvm/kvm.h
+===================================================================
+--- freebsd-libs.orig/lib/libkvm/kvm.h
++++ freebsd-libs/lib/libkvm/kvm.h
+@@ -36,7 +36,7 @@
  #include <sys/cdefs.h>
  #include <sys/types.h>
+ #include <stdint.h>		/* uint64_t */
 -#include <nlist.h>
 +#include <bsd/nlist.h>
  

@@ -1,5 +1,7 @@
---- a/lib/libgeom/Makefile
-+++ b/lib/libgeom/Makefile
+Index: freebsd-libs/lib/libgeom/Makefile
+===================================================================
+--- freebsd-libs.orig/lib/libgeom/Makefile
++++ freebsd-libs/lib/libgeom/Makefile
 @@ -1,6 +1,7 @@
  # $FreeBSD$
  
@@ -8,7 +10,7 @@
  SHLIBDIR?= /lib
  SRCS+=	geom_getxml.c
  SRCS+=	geom_stats.c
-@@ -16,6 +17,8 @@
+@@ -16,6 +17,8 @@ WARNS?=	3
  DPADD=	${LIBBSDXML} ${LIBSBUF}
  LDADD=	-lbsdxml -lsbuf
  
@@ -17,9 +19,11 @@
  MAN=	libgeom.3
  
  MLINKS+= \
---- a/lib/libutil/Makefile
-+++ b/lib/libutil/Makefile
-@@ -5,15 +5,11 @@
+Index: freebsd-libs/lib/libutil/Makefile
+===================================================================
+--- freebsd-libs.orig/lib/libutil/Makefile
++++ freebsd-libs/lib/libutil/Makefile
+@@ -5,15 +5,11 @@ SHLIBDIR?= /lib
  
  .include <bsd.own.mk>
  
@@ -37,7 +41,7 @@
  	stub.c trimdomain.c uucplock.c
  INCS=	libutil.h login_cap.h
  
-@@ -25,6 +21,14 @@
+@@ -25,6 +21,14 @@ CFLAGS+= -DINET6
  
  CFLAGS+= -I${.CURDIR} -I${.CURDIR}/../libc/gen/
  
@@ -52,9 +56,11 @@
  MAN+=	expand_number.3 flopen.3 fparseln.3 hexdump.3 \
  	humanize_number.3 kinfo_getallproc.3 kinfo_getfile.3 \
  	kinfo_getproc.3 kinfo_getvmmap.3 kld.3 login_auth.3 login_cap.3 \
---- a/lib/libkvm/Makefile
-+++ b/lib/libkvm/Makefile
-@@ -5,6 +5,7 @@
+Index: freebsd-libs/lib/libkvm/Makefile
+===================================================================
+--- freebsd-libs.orig/lib/libkvm/Makefile
++++ freebsd-libs/lib/libkvm/Makefile
+@@ -5,6 +5,7 @@ LIB=	kvm
  SHLIBDIR?= /lib
  SHLIB_MAJOR=	6
  CFLAGS+=-DLIBC_SCCS -I${.CURDIR}
@@ -62,9 +68,11 @@
  
  .if exists(${.CURDIR}/kvm_${MACHINE_ARCH}.c)
  KVM_ARCH=${MACHINE_ARCH}
---- a/lib/libipx/Makefile
-+++ b/lib/libipx/Makefile
-@@ -7,6 +7,10 @@
+Index: freebsd-libs/lib/libipx/Makefile
+===================================================================
+--- freebsd-libs.orig/lib/libipx/Makefile
++++ freebsd-libs/lib/libipx/Makefile
+@@ -7,6 +7,10 @@ SRCS=	ipx_addr.c ipx_ntoa.c
  MAN=	ipx.3
  MLINKS+=ipx.3 ipx_addr.3 ipx.3 ipx_ntoa.3
  
@@ -75,9 +83,11 @@
  WARNS?=	2
  
  .include <bsd.lib.mk>
---- a/lib/libelf/Makefile
-+++ b/lib/libelf/Makefile
-@@ -61,7 +61,7 @@
+Index: freebsd-libs/lib/libelf/Makefile
+===================================================================
+--- freebsd-libs.orig/lib/libelf/Makefile
++++ freebsd-libs/lib/libelf/Makefile
+@@ -61,7 +61,7 @@ INCS=	libelf.h gelf.h
  # problems when a header file in sys depends on a file in another
  # part of the tree, e.g. a machine dependent header.
  #

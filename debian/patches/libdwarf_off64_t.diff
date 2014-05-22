@@ -2,8 +2,10 @@
 We can't use -D_FILE_OFFSET_BITS=64 here, as
 libdwarf.h is a public header.
 
---- a/lib/libdwarf/libdwarf.h
-+++ b/lib/libdwarf/libdwarf.h
+Index: freebsd-libs/lib/libdwarf/libdwarf.h
+===================================================================
+--- freebsd-libs.orig/lib/libdwarf/libdwarf.h
++++ freebsd-libs/lib/libdwarf/libdwarf.h
 @@ -32,7 +32,7 @@
  #include <libelf.h>
  

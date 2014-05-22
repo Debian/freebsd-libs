@@ -1,5 +1,7 @@
---- a/lib/libusb/libusb10.c
-+++ b/lib/libusb/libusb10.c
+Index: freebsd-libs/lib/libusb/libusb10.c
+===================================================================
+--- freebsd-libs.orig/lib/libusb/libusb10.c
++++ freebsd-libs/lib/libusb/libusb10.c
 @@ -43,6 +43,11 @@
  #include <sys/endian.h>
  #endif

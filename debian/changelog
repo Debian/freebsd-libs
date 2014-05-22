@@ -1,3 +1,9 @@
+freebsd-libs (10.0-6) unstable; urgency=medium
+
+  * Add <stdint.h> include to kvm.h to fix header buildability.
+
+ -- Robert Millan <rmh@debian.org>  Thu, 22 May 2014 23:37:57 +0200
+
 freebsd-libs (10.0-5) unstable; urgency=low
 
   * Upload to unstable.
