@@ -1,6 +1,7 @@
 # Patches from (or merged in) upstream
 svn_HEAD_Makefile.inc.diff
 libusb_handle_events_completed.diff
+empty_libusb_call_macro.diff
 
 # Patches that are in good shape for merging upstream
 

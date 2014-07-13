@@ -1,0 +1,17 @@
+Description:
+ Add empty LIBUSB_CALL macro, to be compatible to the libusb 1.0-API
+Origin: vendor
+Bug-Debian: http://bugs.debian.org/749157
+Applied-Upstream: http://svnweb.freebsd.org/base?view=revision&revision=267047
+
+--- freebsd-libs-10.0.orig/lib/libusb/libusb.h
++++ freebsd-libs-10.0/lib/libusb/libusb.h
+@@ -33,6 +33,8 @@
+ #include <sys/types.h>
+ #endif
+ 
++#define	LIBUSB_CALL
++
+ #ifdef __cplusplus
+ extern	"C" {
+ #endif
