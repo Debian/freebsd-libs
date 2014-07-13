@@ -17,7 +17,7 @@
 +#include <stdint.h>
  #endif
  
- #ifdef __cplusplus
+ #define	LIBUSB_CALL
 --- a/lib/libusb/libusb20_desc.h
 +++ b/lib/libusb/libusb20_desc.h
 @@ -49,6 +49,8 @@
