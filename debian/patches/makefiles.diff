@@ -3,7 +3,7 @@ Index: freebsd-libs/lib/libgeom/Makefile
 --- freebsd-libs.orig/lib/libgeom/Makefile
 +++ freebsd-libs/lib/libgeom/Makefile
 @@ -1,6 +1,7 @@
- # $FreeBSD$
+ # $FreeBSD: stable/10/lib/libgeom/Makefile 192376 2009-05-19 12:10:48Z trasz $
  
  LIB=	geom
 +SHLIB_MAJOR= 1

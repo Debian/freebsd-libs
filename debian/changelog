@@ -1,9 +1,16 @@
-freebsd-libs (10.0-7) UNRELEASED; urgency=medium
+freebsd-libs (10.1~pre1-1) UNRELEASED; urgency=medium
 
+  * Snapshot from upstream release branch
+
+ -- Christoph Egger <christoph@debian.org>  Sun, 31 Aug 2014 11:13:09 -0700
+
+freebsd-libs (10.0-7) unstable; urgency=medium
+
+  [ Steven Chamberlain ]
   * Add empty LIBUSB_CALL macro, to be compatible to the libusb 1.0-API
     From upstream 10-STABLE.  Thanks, Scott Howard.  (Closes: #749157)
 
- -- Steven Chamberlain <steven@pyro.eu.org>  Sun, 13 Jul 2014 21:47:01 +0100
+ -- Christoph Egger <christoph@debian.org>  Sun, 31 Aug 2014 11:11:57 -0700
 
 freebsd-libs (10.0-6) unstable; urgency=medium
 

@@ -1,14 +1,16 @@
---- a/lib/libelf/Makefile
-+++ b/lib/libelf/Makefile
+Index: freebsd-libs/lib/libelf/Makefile
+===================================================================
+--- freebsd-libs.orig/lib/libelf/Makefile
++++ freebsd-libs/lib/libelf/Makefile
 @@ -1,6 +1,6 @@
- # $FreeBSD$
+ # $FreeBSD: stable/10/lib/libelf/Makefile 238741 2012-07-24 16:03:28Z ache $
  
 -LIB=	elf
 +LIB=	elf-freebsd
  
  SRCS=	elf_begin.c						\
  	elf_cntl.c						\
-@@ -171,6 +171,8 @@
+@@ -171,6 +171,8 @@ libelf_convert.c:	elf_types.m4 libelf_co
  libelf_fsize.c:		elf_types.m4 libelf_fsize.m4
  libelf_msize.c:		elf_types.m4 libelf_msize.m4
  

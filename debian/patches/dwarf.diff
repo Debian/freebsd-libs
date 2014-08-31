@@ -1,14 +1,16 @@
---- a/lib/libdwarf/Makefile
-+++ b/lib/libdwarf/Makefile
+Index: freebsd-libs/lib/libdwarf/Makefile
+===================================================================
+--- freebsd-libs.orig/lib/libdwarf/Makefile
++++ freebsd-libs/lib/libdwarf/Makefile
 @@ -1,6 +1,6 @@
- # $FreeBSD$
+ # $FreeBSD: stable/10/lib/libdwarf/Makefile 225227 2011-08-28 09:26:48Z kib $
  
 -LIB=	dwarf
 +LIB=	dwarf-freebsd
  
  SRCS=	\
  	dwarf_abbrev.c		\
-@@ -20,7 +20,8 @@
+@@ -20,7 +20,8 @@ SRCS=	\
  
  INCS=	dwarf.h libdwarf.h
  

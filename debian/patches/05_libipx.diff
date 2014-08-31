@@ -1,16 +1,20 @@
---- a/lib/libipx/Makefile
-+++ b/lib/libipx/Makefile
+Index: freebsd-libs/lib/libipx/Makefile
+===================================================================
+--- freebsd-libs.orig/lib/libipx/Makefile
++++ freebsd-libs/lib/libipx/Makefile
 @@ -1,6 +1,7 @@
- # $FreeBSD$
+ # $FreeBSD: stable/10/lib/libipx/Makefile 201381 2010-01-02 09:58:07Z ed $
  
  LIB=	ipx
 +SHLIB_MAJOR=    2
  SHLIBDIR?= /lib
  SRCS=	ipx_addr.c ipx_ntoa.c
  MAN=	ipx.3
---- a/sys/netipx/ipx.h
-+++ b/sys/netipx/ipx.h
-@@ -146,6 +146,7 @@
+Index: freebsd-libs/sys/netipx/ipx.h
+===================================================================
+--- freebsd-libs.orig/sys/netipx/ipx.h
++++ freebsd-libs/sys/netipx/ipx.h
+@@ -146,6 +146,7 @@ struct ipx_addr {
  	u_short		x_port;
  };
  
@@ -18,7 +22,7 @@
  /*
   * Socket address
   */
-@@ -156,6 +157,8 @@
+@@ -156,6 +157,8 @@ struct sockaddr_ipx {
  	char		sipx_zero[2];
  };
  #define sipx_port sipx_addr.x_port
