@@ -1,6 +1,7 @@
-freebsd-libs (10.1~pre1-1) UNRELEASED; urgency=medium
+freebsd-libs (10.1~pre1-1) experimental; urgency=medium
 
   * Snapshot from upstream release branch
+  * Add myself to uploaders
 
  -- Christoph Egger <christoph@debian.org>  Sun, 31 Aug 2014 11:13:09 -0700
 
