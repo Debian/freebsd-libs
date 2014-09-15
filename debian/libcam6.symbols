@@ -93,6 +93,8 @@ libcam.so.6 libcam6 #MINVER#
  scsi_get_ascq@Base 9.0
  scsi_get_block_info@Base 9.0
  scsi_get_devid@Base 9.0
+ scsi_get_devid_desc@Base 10.1~pre1-2
+ scsi_get_nv@Base 10.1~pre1-2
  scsi_get_sense_info@Base 9.0
  scsi_get_sense_key@Base 9.0
  scsi_get_sks@Base 9.0
@@ -107,11 +109,21 @@ libcam.so.6 libcam6 #MINVER#
  scsi_mode_select_len@Base 7.0
  scsi_mode_sense@Base 7.0
  scsi_mode_sense_len@Base 7.0
+ scsi_nv_to_str@Base 10.1~pre1-2
  scsi_op_desc@Base 7.0
+ scsi_parse_transportid@Base 10.1~pre1-2
+ scsi_parse_transportid_64bit@Base 10.1~pre1-2
+ scsi_parse_transportid_iscsi@Base 10.1~pre1-2
+ scsi_parse_transportid_rdma@Base 10.1~pre1-2
+ scsi_parse_transportid_sop@Base 10.1~pre1-2
+ scsi_parse_transportid_spi@Base 10.1~pre1-2
+ scsi_persistent_reserve_in@Base 10.1~pre1-2
+ scsi_persistent_reserve_out@Base 10.1~pre1-2
  scsi_prevent@Base 7.0
- scsi_progress_sbuf@Base 9.0
  scsi_print_inquiry@Base 7.0
  scsi_print_inquiry_short@Base 10.0
+ scsi_progress_sbuf@Base 9.0
+ scsi_proto_map@Base 10.1~pre1-2
  scsi_read_block_limits@Base 7.0
  scsi_read_buffer@Base 9.1
  scsi_read_capacity@Base 7.0
@@ -155,6 +167,7 @@ libcam.so.6 libcam6 #MINVER#
  scsi_stream_sbuf@Base 9.0
  scsi_synchronize_cache@Base 7.0
  scsi_test_unit_ready@Base 7.0
+ scsi_transportid_sbuf@Base 10.1~pre1-2
  scsi_unmap@Base 9.1
  scsi_write_buffer@Base 9.1
  scsi_write_filemarks@Base 7.0
