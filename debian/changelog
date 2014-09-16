@@ -1,6 +1,7 @@
-freebsd-libs (10.1~pre1-2) UNRELEASED; urgency=medium
+freebsd-libs (10.1~svn271690-1) UNRELEASED; urgency=medium
 
   [ Steven Chamberlain]
+  * New upstream snapshot of 10.1-PRERELEASE
   * Raise Build-Depends on freebsd-glue to >= 0.2.20~, to not be
     affected by #759249 if the installed libbsd-dev is newer
   * Update with new symbols:
