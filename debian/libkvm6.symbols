@@ -9,7 +9,7 @@ libkvm.so.6 libkvm6 #MINVER#
  kvm_getfiles@Base 7.0
  kvm_getloadavg@Base 7.0
  kvm_getmaxcpu@Base 7.1
- kvm_getncpus@Base 10.1~pre1-2
+ kvm_getncpus@Base 10.1~
  kvm_getpcpu@Base 7.1
  kvm_getprocs@Base 7.0
  kvm_getswapinfo@Base 7.0

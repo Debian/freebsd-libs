@@ -4,7 +4,7 @@ freebsd-libs (10.1~svn271690-1) UNRELEASED; urgency=medium
   * New upstream snapshot of 10.1-PRERELEASE
   * Raise Build-Depends on freebsd-glue to >= 0.2.20~, to not be
     affected by #759249 if the installed libbsd-dev is newer
-  * Update with new symbols:
+  * Update with new versioned symbols:
     - libcam6.symbols
     - libkvm6.symbols
 
