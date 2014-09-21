@@ -1,4 +1,4 @@
-freebsd-libs (10.1~svn271690-1) UNRELEASED; urgency=medium
+freebsd-libs (10.1~svn271690-1) experimental; urgency=medium
 
   [ Steven Chamberlain]
   * New upstream snapshot of 10.1-PRERELEASE
@@ -8,7 +8,7 @@ freebsd-libs (10.1~svn271690-1) UNRELEASED; urgency=medium
     - libcam6.symbols
     - libkvm6.symbols
 
- -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Tue, 02 Sep 2014 14:00:18 +0100
+ -- Christoph Egger <christoph@debian.org>  Tue, 16 Sep 2014 20:41:50 -0700
 
 freebsd-libs (10.1~pre1-1) experimental; urgency=medium
 
