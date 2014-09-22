@@ -1,3 +1,12 @@
+freebsd-libs (10.1~svn271690-2) UNRELEASED; urgency=medium
+
+  [ Steven Chamberlain ]
+  * Match up libutil.h declarations of openpty, forkpty with those in
+    GNU libc pty.h, in case an application includes both (fixes FTBFS of
+    ruby2.1)
+
+ -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Mon, 22 Sep 2014 23:11:27 +0100
+
 freebsd-libs (10.1~svn271690-1) experimental; urgency=medium
 
   [ Steven Chamberlain]

@@ -28,3 +28,4 @@ assume_default_login_class.diff
 rlimit.diff
 libdwarf_off64_t.diff
 makefiles.diff
+pty_decls.diff
