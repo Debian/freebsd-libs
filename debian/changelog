@@ -1,11 +1,27 @@
-freebsd-libs (10.1~svn272500-1) UNRELEASED; urgency=medium
+freebsd-libs (10.1~svn272464-1) UNRELEASED; urgency=medium
 
-  * New upstream snapshot of 10.1 releng branch
+  [ Petr Salinger ]
+  * New upstream snapshot of 10.1-RC1
+  * Refresh patches with "a/" "b/" paths and without revision tags:
+    - cdefs_macros.diff
+    - 04_libkvm.diff
+    - 05_libipx.diff
+    - kvm_size_t_kludge.diff
+    - dwarf.diff
+    - elf.diff
+    - libusb_pthread_condattr_setclock.diff
+    - libbsd_nlist.diff
+    - assume_default_login_class.diff
+    - rlimit.diff
+    - libdwarf_off64_t.diff
+    - makefiles.diff
 
   [ Steven Chamberlain ]
   * Match up libutil.h declarations of openpty, forkpty with those in
     GNU libc pty.h, in case an application includes both (fixes FTBFS of
     ruby2.1)
+  * In get-orig-source, svn export with --ignore-keywords so that
+    revision tags do not fuzzy the patches
 
  -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Mon, 22 Sep 2014 23:11:27 +0100
 
