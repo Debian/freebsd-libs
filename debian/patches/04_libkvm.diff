@@ -1,7 +1,5 @@
-Index: freebsd-libs/lib/libkvm/kvm_vnet.c
-===================================================================
---- freebsd-libs.orig/lib/libkvm/kvm_vnet.c
-+++ freebsd-libs/lib/libkvm/kvm_vnet.c
+--- a/lib/libkvm/kvm_vnet.c
++++ b/lib/libkvm/kvm_vnet.c
 @@ -68,18 +68,18 @@ _kvm_vnet_selectpid(kvm_t *kd, pid_t pid
  		 * here to __{start,stop}_set_vnet.
  		 */
@@ -28,10 +26,8 @@ Index: freebsd-libs/lib/libkvm/kvm_vnet.c
  	};
  	uintptr_t procp, credp;
  #define	VMCORE_VNET_OF_PROC0
-Index: freebsd-libs/lib/libkvm/kvm_proc.c
-===================================================================
---- freebsd-libs.orig/lib/libkvm/kvm_proc.c
-+++ freebsd-libs/lib/libkvm/kvm_proc.c
+--- a/lib/libkvm/kvm_proc.c
++++ b/lib/libkvm/kvm_proc.c
 @@ -387,6 +387,12 @@ nopgrp:
  		kp->ki_runtime = cputick2usec(proc.p_rux.rux_runtime);
  		kp->ki_pid = proc.p_pid;
@@ -45,10 +41,8 @@ Index: freebsd-libs/lib/libkvm/kvm_proc.c
  		SIGSETOR(kp->ki_siglist, mtd.td_siglist);
  		kp->ki_sigmask = mtd.td_sigmask;
  		kp->ki_xstat = proc.p_xstat;
-Index: freebsd-libs/lib/libkvm/kvm.h
-===================================================================
---- freebsd-libs.orig/lib/libkvm/kvm.h
-+++ freebsd-libs/lib/libkvm/kvm.h
+--- a/lib/libkvm/kvm.h
++++ b/lib/libkvm/kvm.h
 @@ -35,6 +35,7 @@
  
  #include <sys/cdefs.h>

@@ -1,9 +1,7 @@
-Index: freebsd-libs/lib/libdwarf/Makefile
-===================================================================
---- freebsd-libs.orig/lib/libdwarf/Makefile
-+++ freebsd-libs/lib/libdwarf/Makefile
+--- a/lib/libdwarf/Makefile
++++ b/lib/libdwarf/Makefile
 @@ -1,6 +1,6 @@
- # $FreeBSD: stable/10/lib/libdwarf/Makefile 225227 2011-08-28 09:26:48Z kib $
+ # $FreeBSD$
  
 -LIB=	dwarf
 +LIB=	dwarf-freebsd

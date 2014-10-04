@@ -2,10 +2,8 @@
 With exported headers using a hacked <sys/cdefs.h> is not enough, since
 they're used by external programs.  Manual patching is required...
 
-Index: freebsd-libs/lib/libcam/camlib.h
-===================================================================
---- freebsd-libs.orig/lib/libcam/camlib.h
-+++ freebsd-libs/lib/libcam/camlib.h
+--- a/lib/libcam/camlib.h
++++ b/lib/libcam/camlib.h
 @@ -151,12 +151,12 @@ int			cam_get_device(const char *path, c
   * Buffer encoding/decoding routines, from the old SCSI library.
   */
@@ -30,10 +28,8 @@ Index: freebsd-libs/lib/libcam/camlib.h
  int buff_encode_visit(u_int8_t *buff, size_t len, const char *fmt,
  		      int (*arg_get)(void *hook, char *field_name),
  		      void *gethook);
-Index: freebsd-libs/lib/libnetgraph/netgraph.h
-===================================================================
---- freebsd-libs.orig/lib/libnetgraph/netgraph.h
-+++ freebsd-libs/lib/libnetgraph/netgraph.h
+--- a/lib/libnetgraph/netgraph.h
++++ b/lib/libnetgraph/netgraph.h
 @@ -48,9 +48,9 @@
  
  __BEGIN_DECLS
@@ -46,10 +42,8 @@ Index: freebsd-libs/lib/libnetgraph/netgraph.h
  int	NgSendReplyMsg(int, const char *,
  		const struct ng_mesg *, const void *, size_t);
  int	NgRecvMsg(int, struct ng_mesg *, size_t, char *);
-Index: freebsd-libs/lib/libusb/libusb.h
-===================================================================
---- freebsd-libs.orig/lib/libusb/libusb.h
-+++ freebsd-libs/lib/libusb/libusb.h
+--- a/lib/libusb/libusb.h
++++ b/lib/libusb/libusb.h
 @@ -268,7 +268,7 @@ typedef struct libusb_endpoint_descripto
  	uint8_t	bSynchAddress;
  	uint8_t *extra;
@@ -137,10 +131,8 @@ Index: freebsd-libs/lib/libusb/libusb.h
  
  /* Library initialisation */
  
-Index: freebsd-libs/lib/libusb/libusb20_desc.h
-===================================================================
---- freebsd-libs.orig/lib/libusb/libusb20_desc.h
-+++ freebsd-libs/lib/libusb/libusb20_desc.h
+--- a/lib/libusb/libusb20_desc.h
++++ b/lib/libusb/libusb20_desc.h
 @@ -102,7 +102,7 @@ struct libusb20_me_struct {
  	void   *ptr;			/* data pointer */
  	uint16_t len;			/* defaults to zero */
@@ -185,10 +177,8 @@ Index: freebsd-libs/lib/libusb/libusb20_desc.h
  
  uint8_t	libusb20_me_get_1(const struct libusb20_me_struct *ie, uint16_t offset);
  uint16_t libusb20_me_get_2(const struct libusb20_me_struct *ie, uint16_t offset);
-Index: freebsd-libs/sys/sys/sbuf.h
-===================================================================
---- freebsd-libs.orig/sys/sys/sbuf.h
-+++ freebsd-libs/sys/sys/sbuf.h
+--- a/sys/sys/sbuf.h
++++ b/sys/sys/sbuf.h
 @@ -71,9 +71,9 @@ int		 sbuf_bcpy(struct sbuf *, const voi
  int		 sbuf_cat(struct sbuf *, const char *);
  int		 sbuf_cpy(struct sbuf *, const char *);

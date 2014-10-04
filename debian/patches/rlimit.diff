@@ -1,7 +1,5 @@
-Index: freebsd-libs/lib/libutil/login_class.c
-===================================================================
---- freebsd-libs.orig/lib/libutil/login_class.c
-+++ freebsd-libs/lib/libutil/login_class.c
+--- a/lib/libutil/login_class.c
++++ b/lib/libutil/login_class.c
 @@ -47,6 +47,9 @@ __FBSDID("$FreeBSD$");
  #include <syslog.h>
  #include <unistd.h>

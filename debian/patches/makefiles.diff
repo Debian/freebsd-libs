@@ -1,9 +1,7 @@
-Index: freebsd-libs/lib/libgeom/Makefile
-===================================================================
---- freebsd-libs.orig/lib/libgeom/Makefile
-+++ freebsd-libs/lib/libgeom/Makefile
+--- a/lib/libgeom/Makefile
++++ b/lib/libgeom/Makefile
 @@ -1,6 +1,7 @@
- # $FreeBSD: stable/10/lib/libgeom/Makefile 192376 2009-05-19 12:10:48Z trasz $
+ # $FreeBSD$
  
  LIB=	geom
 +SHLIB_MAJOR= 1
@@ -19,10 +17,8 @@ Index: freebsd-libs/lib/libgeom/Makefile
  MAN=	libgeom.3
  
  MLINKS+= \
-Index: freebsd-libs/lib/libutil/Makefile
-===================================================================
---- freebsd-libs.orig/lib/libutil/Makefile
-+++ freebsd-libs/lib/libutil/Makefile
+--- a/lib/libutil/Makefile
++++ b/lib/libutil/Makefile
 @@ -5,15 +5,11 @@ SHLIBDIR?= /lib
  
  .include <bsd.own.mk>
@@ -56,10 +52,8 @@ Index: freebsd-libs/lib/libutil/Makefile
  MAN+=	expand_number.3 flopen.3 fparseln.3 hexdump.3 \
  	humanize_number.3 kinfo_getallproc.3 kinfo_getfile.3 \
  	kinfo_getproc.3 kinfo_getvmmap.3 kld.3 login_auth.3 login_cap.3 \
-Index: freebsd-libs/lib/libkvm/Makefile
-===================================================================
---- freebsd-libs.orig/lib/libkvm/Makefile
-+++ freebsd-libs/lib/libkvm/Makefile
+--- a/lib/libkvm/Makefile
++++ b/lib/libkvm/Makefile
 @@ -5,6 +5,7 @@ LIB=	kvm
  SHLIBDIR?= /lib
  SHLIB_MAJOR=	6
@@ -68,10 +62,8 @@ Index: freebsd-libs/lib/libkvm/Makefile
  
  .if exists(${.CURDIR}/kvm_${MACHINE_ARCH}.c)
  KVM_ARCH=${MACHINE_ARCH}
-Index: freebsd-libs/lib/libipx/Makefile
-===================================================================
---- freebsd-libs.orig/lib/libipx/Makefile
-+++ freebsd-libs/lib/libipx/Makefile
+--- a/lib/libipx/Makefile
++++ b/lib/libipx/Makefile
 @@ -7,6 +7,10 @@ SRCS=	ipx_addr.c ipx_ntoa.c
  MAN=	ipx.3
  MLINKS+=ipx.3 ipx_addr.3 ipx.3 ipx_ntoa.3
@@ -83,10 +75,8 @@ Index: freebsd-libs/lib/libipx/Makefile
  WARNS?=	2
  
  .include <bsd.lib.mk>
-Index: freebsd-libs/lib/libelf/Makefile
-===================================================================
---- freebsd-libs.orig/lib/libelf/Makefile
-+++ freebsd-libs/lib/libelf/Makefile
+--- a/lib/libelf/Makefile
++++ b/lib/libelf/Makefile
 @@ -61,7 +61,7 @@ INCS=	libelf.h gelf.h
  # problems when a header file in sys depends on a file in another
  # part of the tree, e.g. a machine dependent header.

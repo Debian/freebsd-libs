@@ -1,7 +1,5 @@
-Index: freebsd-libs/lib/libkvm/kvm.h
-===================================================================
---- freebsd-libs.orig/lib/libkvm/kvm.h
-+++ freebsd-libs/lib/libkvm/kvm.h
+--- a/lib/libkvm/kvm.h
++++ b/lib/libkvm/kvm.h
 @@ -43,7 +43,8 @@
  #define	VRS_KEY		"VERSION"
  

@@ -1,6 +1,6 @@
 --- a/lib/libutil/libutil.h
 +++ b/lib/libutil/libutil.h
-@@ -94,7 +94,7 @@
+@@ -94,7 +94,7 @@ int	extattr_namespace_to_string(int _att
  int	extattr_string_to_namespace(const char *_string, int *_attrnamespace);
  int	flopen(const char *_path, int _flags, ...);
  int	forkpty(int *_amaster, char *_name,
@@ -9,7 +9,7 @@
  void	hexdump(const void *_ptr, int _length, const char *_hdr, int _flags);
  int	humanize_number(char *_buf, size_t _len, int64_t _number,
  	    const char *_suffix, int _scale, int _flags);
-@@ -110,7 +110,7 @@
+@@ -110,7 +110,7 @@ int	kld_isloaded(const char *_name);
  int	kld_load(const char *_name);
  int	login_tty(int _fd);
  int	openpty(int *_amaster, int *_aslave, char *_name,

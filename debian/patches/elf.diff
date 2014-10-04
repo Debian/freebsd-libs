@@ -1,9 +1,7 @@
-Index: freebsd-libs/lib/libelf/Makefile
-===================================================================
---- freebsd-libs.orig/lib/libelf/Makefile
-+++ freebsd-libs/lib/libelf/Makefile
+--- a/lib/libelf/Makefile
++++ b/lib/libelf/Makefile
 @@ -1,6 +1,6 @@
- # $FreeBSD: stable/10/lib/libelf/Makefile 238741 2012-07-24 16:03:28Z ache $
+ # $FreeBSD$
  
 -LIB=	elf
 +LIB=	elf-freebsd

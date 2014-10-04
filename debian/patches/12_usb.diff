@@ -1,6 +1,6 @@
 --- a/lib/libusb/Makefile
 +++ b/lib/libusb/Makefile
-@@ -21,6 +21,7 @@
+@@ -21,6 +21,7 @@ WARNS?=		2
  
  DPADD=		${LIBPTHREAD}
  LDADD=		${PTHREAD_LIBS}

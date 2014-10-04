@@ -5,7 +5,7 @@ some commits which hadn't made it to 9.0-RELEASE were MFC'ed to
 
 --- a/lib/libusbhid/Makefile
 +++ b/lib/libusbhid/Makefile
-@@ -5,7 +5,7 @@
+@@ -5,7 +5,7 @@ LIB=	usbhid
  MAN=	usbhid.3
  
  LDADD= -lbsd
