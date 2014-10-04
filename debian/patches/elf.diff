@@ -8,7 +8,7 @@
  
  SRCS=	elf_begin.c						\
  	elf_cntl.c						\
-@@ -171,6 +171,8 @@ libelf_convert.c:	elf_types.m4 libelf_co
+@@ -171,6 +171,8 @@
  libelf_fsize.c:		elf_types.m4 libelf_fsize.m4
  libelf_msize.c:		elf_types.m4 libelf_msize.m4
  

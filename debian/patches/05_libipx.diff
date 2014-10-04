@@ -10,7 +10,7 @@
  MAN=	ipx.3
 --- a/sys/netipx/ipx.h
 +++ b/sys/netipx/ipx.h
-@@ -146,6 +146,7 @@ struct ipx_addr {
+@@ -146,6 +146,7 @@
  	u_short		x_port;
  };
  
@@ -18,7 +18,7 @@
  /*
   * Socket address
   */
-@@ -156,6 +157,8 @@ struct sockaddr_ipx {
+@@ -156,6 +157,8 @@
  	char		sipx_zero[2];
  };
  #define sipx_port sipx_addr.x_port

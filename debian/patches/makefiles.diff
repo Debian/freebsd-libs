@@ -8,7 +8,7 @@
  SHLIBDIR?= /lib
  SRCS+=	geom_getxml.c
  SRCS+=	geom_stats.c
-@@ -16,6 +17,8 @@ WARNS?=	3
+@@ -16,6 +17,8 @@
  DPADD=	${LIBBSDXML} ${LIBSBUF}
  LDADD=	-lbsdxml -lsbuf
  
@@ -19,7 +19,7 @@
  MLINKS+= \
 --- a/lib/libutil/Makefile
 +++ b/lib/libutil/Makefile
-@@ -5,15 +5,11 @@ SHLIBDIR?= /lib
+@@ -5,15 +5,11 @@
  
  .include <bsd.own.mk>
  
@@ -37,7 +37,7 @@
  	stub.c trimdomain.c uucplock.c
  INCS=	libutil.h login_cap.h
  
-@@ -25,6 +21,14 @@ CFLAGS+= -DINET6
+@@ -25,6 +21,14 @@
  
  CFLAGS+= -I${.CURDIR} -I${.CURDIR}/../libc/gen/
  
@@ -54,7 +54,7 @@
  	kinfo_getproc.3 kinfo_getvmmap.3 kld.3 login_auth.3 login_cap.3 \
 --- a/lib/libkvm/Makefile
 +++ b/lib/libkvm/Makefile
-@@ -5,6 +5,7 @@ LIB=	kvm
+@@ -5,6 +5,7 @@
  SHLIBDIR?= /lib
  SHLIB_MAJOR=	6
  CFLAGS+=-DLIBC_SCCS -I${.CURDIR}
@@ -64,7 +64,7 @@
  KVM_ARCH=${MACHINE_ARCH}
 --- a/lib/libipx/Makefile
 +++ b/lib/libipx/Makefile
-@@ -7,6 +7,10 @@ SRCS=	ipx_addr.c ipx_ntoa.c
+@@ -7,6 +7,10 @@
  MAN=	ipx.3
  MLINKS+=ipx.3 ipx_addr.3 ipx.3 ipx_ntoa.3
  
@@ -77,7 +77,7 @@
  .include <bsd.lib.mk>
 --- a/lib/libelf/Makefile
 +++ b/lib/libelf/Makefile
-@@ -61,7 +61,7 @@ INCS=	libelf.h gelf.h
+@@ -61,7 +61,7 @@
  # problems when a header file in sys depends on a file in another
  # part of the tree, e.g. a machine dependent header.
  #

@@ -1,6 +1,6 @@
 --- a/lib/libalias/libalias/Makefile
 +++ b/lib/libalias/libalias/Makefile
-@@ -9,5 +9,6 @@ MAN=	libalias.3
+@@ -9,5 +9,6 @@
  SRCS=	alias.c alias_db.c alias_proxy.c alias_util.c alias_mod.c
  INCS=	alias.h
  NO_WERROR=

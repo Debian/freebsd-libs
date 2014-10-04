@@ -1,6 +1,6 @@
 --- a/lib/libmemstat/memstat_uma.c
 +++ b/lib/libmemstat/memstat_uma.c
-@@ -305,6 +305,7 @@ memstat_kvm_uma(struct memory_type_list
+@@ -305,6 +305,7 @@
  	char name[MEMTYPE_MAXNAME];
  	cpuset_t all_cpus;
  	long cpusetsize;
@@ -8,7 +8,7 @@
  	kvm_t *kvm;
  
  	kvm = (kvm_t *)kvm_handle;
-@@ -328,8 +329,9 @@ memstat_kvm_uma(struct memory_type_list
+@@ -328,8 +329,9 @@
  		list->mtl_error = ret;
  		return (-1);
  	}

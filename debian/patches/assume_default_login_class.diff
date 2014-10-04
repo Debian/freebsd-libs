@@ -3,7 +3,7 @@ We don't have this feature. See login.conf(5)
 
 --- a/lib/libutil/login_cap.c
 +++ b/lib/libutil/login_cap.c
-@@ -324,7 +324,6 @@ login_getpwclass(const struct passwd *pw
+@@ -324,7 +324,6 @@
      const char	*cls = NULL;
  
      if (pwd != NULL) {

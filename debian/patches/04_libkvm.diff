@@ -1,6 +1,6 @@
 --- a/lib/libkvm/kvm_vnet.c
 +++ b/lib/libkvm/kvm_vnet.c
-@@ -68,18 +68,18 @@ _kvm_vnet_selectpid(kvm_t *kd, pid_t pid
+@@ -68,18 +68,18 @@
  		 * here to __{start,stop}_set_vnet.
  		 */
  #define	NLIST_START_VNET	0
@@ -28,7 +28,7 @@
  #define	VMCORE_VNET_OF_PROC0
 --- a/lib/libkvm/kvm_proc.c
 +++ b/lib/libkvm/kvm_proc.c
-@@ -387,6 +387,12 @@ nopgrp:
+@@ -387,6 +387,12 @@
  		kp->ki_runtime = cputick2usec(proc.p_rux.rux_runtime);
  		kp->ki_pid = proc.p_pid;
  		kp->ki_siglist = proc.p_siglist;

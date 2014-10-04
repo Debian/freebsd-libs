@@ -8,7 +8,7 @@
  
  SRCS=	\
  	dwarf_abbrev.c		\
-@@ -20,7 +20,8 @@ SRCS=	\
+@@ -20,7 +20,8 @@
  
  INCS=	dwarf.h libdwarf.h
  
