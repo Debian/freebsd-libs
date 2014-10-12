@@ -1,3 +1,11 @@
+freebsd-libs (10.1~svn272464-2) UNRELEASED; urgency=medium
+
+  * Build-Depend on freebsd-mk >= 10.0-5 for MK_TESTS
+  * No longer try to set MK_TESTS in debian/rules;  use WITH_TESTS
+    instead (Closes: #764956)
+
+ -- Steven Chamberlain <steven@pyro.eu.org>  Sun, 12 Oct 2014 17:14:18 +0100
+
 freebsd-libs (10.1~svn272464-1) unstable; urgency=low
 
   [ Petr Salinger ]
