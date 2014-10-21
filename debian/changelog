@@ -1,4 +1,4 @@
-freebsd-libs (10.1~svn273304-1) UNRELEASED; urgency=medium
+freebsd-libs (10.1~svn273304-1) unstable; urgency=medium
 
   * New upstream snapshot of 10.1-RC3~
   * Build-Depend on freebsd-mk >= 10.0-5 for MK_TESTS
