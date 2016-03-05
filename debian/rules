@@ -47,7 +47,7 @@ SVN		:= https://svn0.us-west.freebsd.org/base/releng/$(version)
 #SVN		:= https://svn0.us-west.freebsd.org/base/stable/$(major)
 #SVN		:= https://svn0.us-west.freebsd.org/base/head
 ORIGDIR = $(SOURCE)-$(tar_version)
-TARNAME = $(SOURCE)_$(tar_version).orig.tar.gz
+TARNAME = $(SOURCE)_$(tar_version).orig.tar.xz
 
 PATH := /usr/lib/freebsd:$(PATH)
 DESTDIR = $(CURDIR)/debian/tmp
@@ -97,7 +97,16 @@ get-orig-source:
 	# Remove all CAM kernel headers to ensure system-wide version is used instead
 	find $(ORIGDIR)/sys/cam -name \*.h | xargs rm -f
 
-	tar --numeric-owner --owner 0 --group 0 -czf ../$(TARNAME) $(ORIGDIR)
+	# Clamp timestamps to be no newer than last changelog entry, see
+	# https://wiki.debian.org/ReproducibleBuilds/TimestampsInTarball
+	find $(ORIGDIR) -newermt "@$(SOURCE_DATE_EPOCH)" -print0 \
+	 | xargs -0r touch --no-dereference --date="@$(SOURCE_DATE_EPOCH)"
+	# Create tarball with files sorted in a stable order, see
+	# https://wiki.debian.org/ReproducibleBuilds/FileOrderInTarballs
+	find $(ORIGDIR) -print0 | LC_ALL=C sort -z \
+	 | tar --null --no-recursion --files-from - \
+	    --numeric-owner --owner 0 --group 0 \
+	    -cJf ../$(TARNAME)
 	rm -rf $(ORIGDIR)
 
 BUILD_ARCH_TARGETS = \

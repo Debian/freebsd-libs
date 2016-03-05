@@ -3,6 +3,8 @@ freebsd-libs (10.3~svn296373-1) UNRELEASED; urgency=medium
   * New upstream snapshot of 10.3-RC1
   * Actually use the proper build architecture compiler
     (thanks, Helmut Grohne!)
+  * Make get-orig-source tarball reproducible
+  * Change source tarball compression algorithm to XZ
   * Add myself to Uploaders
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 05 Mar 2016 01:12:41 +0000
