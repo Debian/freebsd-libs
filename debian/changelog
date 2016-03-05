@@ -3,6 +3,7 @@ freebsd-libs (10.3~svn296373-2) UNRELEASED; urgency=medium
   * Avoid including kernel headers on non-kfreebsd arches,
     sys/ctype.h and machine/stdarg.h in sys/kern/subr_prf.c
       - subr_prf.diff
+  * In fparseln, replace fgetln(3) with getline(3) (Closes: #811238)
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 05 Mar 2016 20:17:57 +0000
 

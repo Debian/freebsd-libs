@@ -1,0 +1,69 @@
+Subject: fparseln: replace fgetln(3) with getline(3)
+From: Steven Chamberlain <steven@pyro.eu.org>
+Date: Sat, 05 Mar 2016 22:04:24 +0000
+
+fgetln(3) is available in FreeBSD's libc but not GNU libc.  Use the more
+portable getline(3).  This returns a malloc()'d buffer, rather than a
+pointer to a (unterminated) C string, so remember to free it.
+
+fparseln(3) returns a different malloc()'d buffer, which the caller is
+supposed to free(), so remember to actually do that in the test program.
+
+--- a/lib/libutil/fparseln.c
++++ b/lib/libutil/fparseln.c
+@@ -80,7 +80,7 @@
+ {
+ 	static const char dstr[3] = { '\\', '\\', '#' };
+ 
+-	size_t	s, len;
++	ssize_t	s, ibuflen, len;
+ 	char   *buf;
+ 	char   *ptr, *cp;
+ 	int	cnt;
+@@ -90,7 +90,9 @@
+ 	_DIAGASSERT(fp != NULL);
+ #endif
+ 
++	ibuflen = 0;
+ 	len = 0;
++	ptr = NULL;
+ 	buf = NULL;
+ 	cnt = 1;
+ 
+@@ -112,7 +114,7 @@
+ 		if (lineno)
+ 			(*lineno)++;
+ 
+-		if ((ptr = fgetln(fp, &s)) == NULL)
++		if ((s = getline(&ptr, &ibuflen, fp)) < 0)
+ 			break;
+ 
+ 		if (s && com) {		/* Check and eliminate comments */
+@@ -151,6 +153,7 @@
+ 
+ 		if ((cp = realloc(buf, len + s + 1)) == NULL) {
+ 			free(buf);
++			free(ptr);
+ 			return NULL;
+ 		}
+ 		buf = cp;
+@@ -159,6 +162,7 @@
+ 		len += s;
+ 		buf[len] = '\0';
+ 	}
++	free(ptr);
+ 
+ 	if ((flags & FPARSELN_UNESCALL) != 0 && esc && buf != NULL &&
+ 	    strchr(buf, esc) != NULL) {
+@@ -206,8 +210,10 @@
+ 
+ 	line = 0;
+ 	while ((ptr = fparseln(stdin, &size, &line, NULL,
+-	    FPARSELN_UNESCALL)) != NULL)
++	    FPARSELN_UNESCALL)) != NULL) {
+ 		printf("line %d (%d) |%s|\n", line, size, ptr);
++		free(ptr);
++	}
+ 	return 0;
+ }
+ 

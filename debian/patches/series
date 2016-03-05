@@ -33,3 +33,4 @@ libusb_reported_version.diff
 libusb_set_auto_detach_kernel_driver.diff
 pkgconfig_dir.diff
 subr_prf.diff
+replace_fgetln.diff
