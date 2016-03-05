@@ -1,0 +1,12 @@
+--- a/sys/kern/subr_prf.c
++++ b/sys/kern/subr_prf.c
+@@ -60,8 +60,8 @@
+ #include <sys/syslog.h>
+ #include <sys/cons.h>
+ #include <sys/uio.h>
+-#endif
+ #include <sys/ctype.h>
++#endif
+ #include <sys/sbuf.h>
+ 
+ #ifdef DDB
