@@ -169,6 +169,7 @@ libusb.so.3 libusb3 #MINVER#
  libusb_ref_device@Base 7.1
  libusb_release_interface@Base 7.1
  libusb_reset_device@Base 7.1
+ libusb_set_auto_detach_kernel_driver@Base 10.3~
  libusb_set_configuration@Base 7.1
  libusb_set_debug@Base 7.1
  libusb_set_interface_alt_setting@Base 7.1

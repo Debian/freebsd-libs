@@ -23,6 +23,7 @@ freebsd-libs (10.3~svn296373-1) UNRELEASED; urgency=medium
   * Don't yet build WITH_TESTS=yes
   * Set Debian-specific /usr/lib/pkgconfig path
       - pkgconfig_dir.diff
+  * Record new exported symbols
   * Add myself to Uploaders
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 05 Mar 2016 01:12:41 +0000
