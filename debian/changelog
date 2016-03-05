@@ -18,6 +18,8 @@ freebsd-libs (10.3~svn296373-1) UNRELEASED; urgency=medium
       - libusb_set_auto_detach_kernel_driver.diff
   * Add -lutil-freebsd and -lbsd to lib/libutil/tests/Makefile LDFLAGS
       - makefiles.diff
+  * Build-Depend on freebsd-mk >= 10.3 for *.test.mk
+  * Build-Depend on kfreebsd-kernel-headers >= 10.3 for cam/scsi/
   * Add myself to Uploaders
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 05 Mar 2016 01:12:41 +0000
