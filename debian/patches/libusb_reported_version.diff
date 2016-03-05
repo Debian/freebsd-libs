@@ -1,0 +1,17 @@
+Description:
+ Pick upstream SVN r267110, for libusb-1.0 compatibility library to
+ report version as 1.0.13
+Origin: vendor
+Bug-Debian: https://bugs.debian.org/758405
+Applied-Upstream: https://svnweb.freebsd.org/base?view=revision&revision=267110
+
+--- a/lib/libusb/libusb-1.0.pc
++++ b/lib/libusb/libusb-1.0.pc
+@@ -6,6 +6,6 @@
+ 
+ Name: libusb-1.0
+ Description: Library that abstracts ways to access USB devices (v1.0)
+-Version: 1.0.9
++Version: 1.0.13
+ Libs: -L${libdir} -lusb
+ Cflags: -I${includedir}

@@ -11,6 +11,9 @@ freebsd-libs (10.3~svn296373-1) UNRELEASED; urgency=medium
   * Change source tarball compression algorithm to XZ
   * Actually use the proper build architecture compiler
     (thanks, Helmut Grohne!)
+  * Pick upstream SVN r267110, for libusb-1.0 compatibility library to
+    report version as 1.0.13 (Closes: #758405)
+      - libusb_reported_version.diff
   * Add myself to Uploaders
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 05 Mar 2016 01:12:41 +0000
