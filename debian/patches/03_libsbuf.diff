@@ -3,7 +3,7 @@
 @@ -3,6 +3,7 @@
  LIB=		sbuf
  SHLIBDIR?= 	/lib
- SRCS=		subr_sbuf.c 
+ SRCS=		subr_prf.c subr_sbuf.c
 +CFLAGS+=	-I${.CURDIR}/../../sys
  
  SHLIB_MAJOR	= 6

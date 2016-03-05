@@ -9,7 +9,7 @@
  void	hexdump(const void *_ptr, int _length, const char *_hdr, int _flags);
  int	humanize_number(char *_buf, size_t _len, int64_t _number,
  	    const char *_suffix, int _scale, int _flags);
-@@ -110,7 +110,7 @@
+@@ -112,7 +112,7 @@
  int	kld_load(const char *_name);
  int	login_tty(int _fd);
  int	openpty(int *_amaster, int *_aslave, char *_name,

@@ -1,9 +1,13 @@
 freebsd-libs (10.3~svn296373-1) UNRELEASED; urgency=medium
 
   * New upstream snapshot of 10.3-RC1
+  * Make get-orig-source tarball reproducible
+  * Refresh patches:
+      - 03_libsbuf.diff
+      - makefiles.diff
+      - pty_decls.diff
   * Actually use the proper build architecture compiler
     (thanks, Helmut Grohne!)
-  * Make get-orig-source tarball reproducible
   * Change source tarball compression algorithm to XZ
   * Add myself to Uploaders
 
