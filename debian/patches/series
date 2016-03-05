@@ -30,3 +30,4 @@ libdwarf_off64_t.diff
 makefiles.diff
 pty_decls.diff
 libusb_reported_version.diff
+libusb_set_auto_detach_kernel_driver.diff

@@ -1,0 +1,34 @@
+Subject: add libusb_set_auto_detach_kernel_driver stub
+From: Steven Chamberlain <steven@pyro.eu.org>
+Date: Sat, 05 Mar 2016 02:47:24 +0000
+
+Add a stub implementation of libusb_set_auto_detach_kernel_driver
+to the libusb-1.0 compatbility library.  This returns only
+LIBUSB_ERROR_NOT_SUPPORTED.
+
+--- a/lib/libusb/libusb.h
++++ b/lib/libusb/libusb.h
+@@ -420,6 +420,7 @@
+ int 	libusb_detach_kernel_driver_np(libusb_device_handle * devh, int interface);
+ int 	libusb_detach_kernel_driver(libusb_device_handle * devh, int interface);
+ int 	libusb_attach_kernel_driver(libusb_device_handle * devh, int interface);
++int	libusb_set_auto_detach_kernel_driver(libusb_device_handle * devh, int enable);
+ int	libusb_set_interface_alt_setting(libusb_device_handle * devh, int interface_number, int alternate_setting);
+ 
+ /* USB Descriptors */
+--- a/lib/libusb/libusb10.c
++++ b/lib/libusb/libusb10.c
+@@ -852,6 +852,13 @@
+ 	return (0);
+ }
+ 
++int
++libusb_set_auto_detach_kernel_driver(struct libusb20_device *pdev, int enable)
++{
++	/* stub - currently not supported by libusb20 */
++	return (LIBUSB_ERROR_NOT_SUPPORTED);
++}
++
+ /* Asynchronous device I/O */
+ 
+ struct libusb_transfer *
