@@ -1,8 +1,9 @@
-freebsd-libs (10.1~svn273304-2) UNRELEASED; urgency=medium
+freebsd-libs (10.3~svn296373-1) UNRELEASED; urgency=medium
 
+  * New upstream snapshot of 10.3-RC1
   * Add myself to Uploaders
 
- -- Steven Chamberlain <steven@pyro.eu.org>  Wed, 22 Oct 2014 13:34:47 +0100
+ -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 05 Mar 2016 01:12:41 +0000
 
 freebsd-libs (10.1~svn273304-1) unstable; urgency=medium
 
