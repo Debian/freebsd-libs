@@ -2,6 +2,12 @@
 # -*- makefile -*-
 # Sample debian/rules that uses debhelper.
 
+# Determine host architecture compiler
+DEB_HOST_GNU_TYPE	?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+ifeq ($(origin CC),default)
+CC := $(DEB_HOST_GNU_TYPE)-gcc
+endif
+
 SHELL = bash
 
 # Uncomment this to turn on verbose mode.
