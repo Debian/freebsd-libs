@@ -48,6 +48,7 @@ SVN		:= https://svn0.us-west.freebsd.org/base/releng/$(version)
 #SVN		:= https://svn0.us-west.freebsd.org/base/head
 ORIGDIR = $(SOURCE)-$(tar_version)
 TARNAME = $(SOURCE)_$(tar_version).orig.tar.xz
+SOURCE_DATE_EPOCH ?= $(shell date -d "$$(dpkg-parsechangelog -SDate)" +%s)
 
 PATH := /usr/lib/freebsd:$(PATH)
 DESTDIR = $(CURDIR)/debian/tmp
