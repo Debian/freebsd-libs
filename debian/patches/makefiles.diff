@@ -87,3 +87,13 @@
  
  GENSRCS=	libelf_fsize.c libelf_msize.c libelf_convert.c
  CLEANFILES=	${GENSRCS}
+--- a/lib/libutil/tests/Makefile
++++ b/lib/libutil/tests/Makefile
+@@ -10,6 +10,6 @@
+ TAP_TESTS_C+=	trimdomain-nodomain_test
+ 
+ DPADD+=		${LIBUTIL}
+-LDADD+=		-lutil
++LDADD+=		-lutil-freebsd -lbsd
+ 
+ .include <bsd.test.mk>
