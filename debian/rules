@@ -87,7 +87,7 @@ get-orig-source:
 	         sys/sys/sbuf.h \
 		sys/netipx/ipx.h \
 	         share/misc/usb_hid_usages ; do \
-	    svn export --ignore-keywords -r $(svn_revision) $(SVN)/$$i $(ORIGDIR)/$$i ; \
+	    svn export --ignore-keywords -r $(svn_revision) $(SVN)/$$i $(ORIGDIR)/$$i || exit ; \
 	done
 	# Remove unused files with non GPL compatible license (eg BSD 4 clauses)
 	rm -f $(ORIGDIR)/sys/cam/scsi/scsi_ch.*
