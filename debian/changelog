@@ -6,9 +6,11 @@ freebsd-libs (10.3~svn296373-1) UNRELEASED; urgency=medium
       - 03_libsbuf.diff
       - makefiles.diff
       - pty_decls.diff
+  * Check out new upstream source file:
+      - sys/kern/subr_prf.c
+  * Change source tarball compression algorithm to XZ
   * Actually use the proper build architecture compiler
     (thanks, Helmut Grohne!)
-  * Change source tarball compression algorithm to XZ
   * Add myself to Uploaders
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 05 Mar 2016 01:12:41 +0000

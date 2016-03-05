@@ -84,6 +84,7 @@ get-orig-source:
 		lib/libutil \
 		lib/libalias sys/netinet/libalias sys/modules/libalias \
 		lib/Makefile.inc \
+	         sys/kern/subr_prf.c \
 	         sys/kern/subr_sbuf.c \
 	         sys/sys/sbuf.h \
 		sys/netipx/ipx.h \
