@@ -19,7 +19,7 @@ freebsd-libs (10.3~svn296373-1) UNRELEASED; urgency=medium
   * Add -lutil-freebsd and -lbsd to lib/libutil/tests/Makefile LDFLAGS
       - makefiles.diff (Closes: #811238)
   * Build-Depend on kfreebsd-kernel-headers >= 10.3 for cam/scsi/
-  * Build-Depend on freebsd-mk >= 10.3 for *.test.mk
+  * Build-Depend on freebsd-mk >= 10.3 for *.test.mk (Closes: #749327)
   * Don't yet build WITH_TESTS=yes
   * Set Debian-specific /usr/lib/pkgconfig path
       - pkgconfig_dir.diff
