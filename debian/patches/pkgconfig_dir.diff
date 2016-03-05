@@ -1,0 +1,11 @@
+--- a/lib/libusb/Makefile
++++ b/lib/libusb/Makefile
+@@ -39,7 +39,7 @@
+ CFLAGS+=	-DCOMPAT_32BIT
+ .else
+ FILES=		libusb-0.1.pc libusb-1.0.pc libusb-2.0.pc
+-FILESDIR=	${LIBDATADIR}/pkgconfig
++FILESDIR=	${LIBDIR}/pkgconfig
+ .endif
+ 
+ #

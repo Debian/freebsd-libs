@@ -257,7 +257,12 @@ install-arch: build-arch
 	dh_prep -a
 	dh_installdirs -a
 
-	mkdir -p $(DESTDIR)/lib $(DESTDIR)/usr/lib $(DESTDIR)/usr/include $(DESTDIR)/usr/share/man/man3
+	mkdir -p \
+		$(DESTDIR)/lib \
+		$(DESTDIR)/usr/lib \
+		$(DESTDIR)/usr/lib/pkgconfig \
+		$(DESTDIR)/usr/include \
+		$(DESTDIR)/usr/share/man/man3
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf install SHLIBDIR=/lib
 	$(PMAKE) -C $(CURDIR)/lib/libdwarf install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libelf install SHLIBDIR=/usr/lib
@@ -276,8 +281,6 @@ ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libjail install SHLIBDIR=/lib
 	$(PMAKE) -C $(CURDIR)/lib/libalias install SHLIBDIR=/usr/lib
 
-	mkdir -p $(CURDIR)/debian/tmp/usr/lib/pkgconfig
-	install -m644 debian/libusb*.pc $(CURDIR)/debian/tmp/usr/lib/pkgconfig
 	mkdir -p $(CURDIR)/debian/tmp/usr/bin
 	install -m755 debian/libusb-config $(CURDIR)/debian/tmp/usr/bin
 endif
