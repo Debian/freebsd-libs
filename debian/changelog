@@ -1,4 +1,4 @@
-freebsd-libs (10.3~svn296373-3) UNRELEASED; urgency=medium
+freebsd-libs (10.3~svn296373-3) experimental; urgency=medium
 
   * Add missing patch hunk
       - subr_prf.diff
