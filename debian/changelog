@@ -1,3 +1,10 @@
+freebsd-libs (10.3~svn296373-3) UNRELEASED; urgency=medium
+
+  * Add missing patch hunk
+      - subr_prf.diff
+
+ -- Steven Chamberlain <steven@pyro.eu.org>  Sun, 06 Mar 2016 00:22:15 +0000
+
 freebsd-libs (10.3~svn296373-2) experimental; urgency=medium
 
   * Avoid including kernel headers on non-kfreebsd arches,
