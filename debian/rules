@@ -41,11 +41,13 @@ ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	BSD_MAKEFLAGS += -j$(NUMJOBS)
 endif
 
+SVN_BASE	:= https://svn.freebsd.org/base
+#SVN		:= $(SVN_BASE)/release/$(version).0
+SVN		:= $(SVN_BASE)/releng/$(version)
+#SVN		:= $(SVN_BASE)/stable/$(major)
+#SVN		:= $(SVN_BASE)/head
+
 SOURCE = freebsd-libs
-#SVN		:= https://svn0.us-west.freebsd.org/base/release/$(version).0
-SVN		:= https://svn0.us-west.freebsd.org/base/releng/$(version)
-#SVN		:= https://svn0.us-west.freebsd.org/base/stable/$(major)
-#SVN		:= https://svn0.us-west.freebsd.org/base/head
 ORIGDIR = $(SOURCE)-$(tar_version)
 TARNAME = $(SOURCE)_$(tar_version).orig.tar.xz
 SOURCE_DATE_EPOCH ?= $(shell date -d "$$(dpkg-parsechangelog -SDate)" +%s)
