@@ -19,7 +19,7 @@
  MLINKS+= \
 --- a/lib/libutil/Makefile
 +++ b/lib/libutil/Makefile
-@@ -5,16 +5,11 @@
+@@ -5,16 +5,12 @@
  
  .include <bsd.own.mk>
  
@@ -35,10 +35,11 @@
 -	login_class.c login_crypt.c login_ok.c login_times.c login_tty.c \
 -	pidfile.c property.c pty.c pw_util.c quotafile.c realhostname.c \
 +	hexdump.c humanize_number.c \
++	kinfo_getvmobject.c \
  	stub.c trimdomain.c uucplock.c
  INCS=	libutil.h login_cap.h
  
-@@ -26,6 +21,14 @@
+@@ -26,6 +22,14 @@
  
  CFLAGS+= -I${.CURDIR} -I${.CURDIR}/../libc/gen/
  
