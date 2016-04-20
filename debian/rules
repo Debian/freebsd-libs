@@ -2,6 +2,8 @@
 # -*- makefile -*-
 # Sample debian/rules that uses debhelper.
 
+DEB_HOST_MULTIARCH	?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 # Determine host architecture compiler
 DEB_HOST_GNU_TYPE	?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 ifeq ($(origin CC),default)
@@ -262,8 +264,11 @@ install-arch: build-arch
 
 	mkdir -p \
 		$(DESTDIR)/lib \
+		$(DESTDIR)/lib/$(DEB_HOST_MULTIARCH) \
 		$(DESTDIR)/usr/lib \
+		$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH) \
 		$(DESTDIR)/usr/lib/pkgconfig \
+		$(DESTDIR)/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig \
 		$(DESTDIR)/usr/include \
 		$(DESTDIR)/usr/share/man/man3
 	$(PMAKE) -C $(CURDIR)/lib/libsbuf install SHLIBDIR=/lib
@@ -280,15 +285,18 @@ ifeq ($(kernel), kfreebsd)
 	$(PMAKE) -C $(CURDIR)/lib/libmemstat install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libnetgraph install SHLIBDIR=/usr/lib
 	$(PMAKE) -C $(CURDIR)/lib/libusbhid install SHLIBDIR=/usr/lib
-	$(PMAKE) -C $(CURDIR)/lib/libusb install SHLIBDIR=/lib
+	$(PMAKE) -C $(CURDIR)/lib/libusb install SHLIBDIR=/lib/$(DEB_HOST_MULTIARCH) LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH)
 	$(PMAKE) -C $(CURDIR)/lib/libjail install SHLIBDIR=/lib
 	$(PMAKE) -C $(CURDIR)/lib/libalias install SHLIBDIR=/usr/lib
 
 	mkdir -p $(CURDIR)/debian/tmp/usr/bin
 	install -m755 debian/libusb-config $(CURDIR)/debian/tmp/usr/bin
+
+	mkdir -p $(CURDIR)/debian/tmp/usr/include/sys
+	install -m644 sys/sys/sbuf.h $(CURDIR)/debian/tmp/usr/include/sys
 endif
 
-	dh_install -a --list-missing
+	dh_install -a --list-missing --sourcedir=debian/tmp
 
 # Build architecture-independent files here.
 binary-indep: install-indep
