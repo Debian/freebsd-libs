@@ -185,7 +185,7 @@ Package: libusb2-dev
 Section: libdevel
 Architecture: kfreebsd-any
 Depends: libusb3 (= ${binary:Version}), ${misc:Depends}, libc0.1-dev | libc-dev,
-Provides: libusb-1.0-0-dev
+Provides: libusb-1.0-0-dev (= 0.1.12)
 Conflicts: libusb-dev
 Description: Development files for libusb2
  This package contains the header files and static library needed to
