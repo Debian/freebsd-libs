@@ -1,4 +1,4 @@
-freebsd-libs (10.3~svn296373-4) UNRELEASED; urgency=medium
+freebsd-libs (10.3~svn296373-4) experimental; urgency=medium
 
   * Use new preferred hostname for upstream SVN with HTTPS
     (svn.freebsd.org).
