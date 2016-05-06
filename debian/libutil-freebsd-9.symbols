@@ -18,11 +18,11 @@ libutil-freebsd.so.9 libutil-freebsd-9 #MINVER#
  gr_tmp@Base 9.2
  hexdump@Base 9.2
  humanize_number@Base 9.2
- kinfo_getallproc@Base 10.3
- kinfo_getfile@Base 10.3
- kinfo_getproc@Base 10.3
- kinfo_getvmmap@Base 10.3
- kinfo_getvmobject@Base 10.3
+ kinfo_getallproc@Base 10.3~svn296373
+ kinfo_getfile@Base 10.3~svn296373
+ kinfo_getproc@Base 10.3~svn296373
+ kinfo_getvmmap@Base 10.3~svn296373
+ kinfo_getvmobject@Base 10.3~svn296373
  (arch=kfreebsd-any)login_close@Base 9.2
  (arch=kfreebsd-any)login_getcapbool@Base 9.2
  (arch=kfreebsd-any)login_getcaplist@Base 9.2
