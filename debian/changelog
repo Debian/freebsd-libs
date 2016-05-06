@@ -1,4 +1,4 @@
-freebsd-libs (10.3~svn296373-6) UNRELEASED; urgency=medium
+freebsd-libs (10.3~svn296373-6) experimental; urgency=medium
 
   * Fix FTBFS on !kfreebsd: installing sbuf.h in libsbuf-dev is not
     kfreebsd-specific
