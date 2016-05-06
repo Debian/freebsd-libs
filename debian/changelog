@@ -1,4 +1,4 @@
-freebsd-libs (10.3~svn296373-5) UNRELEASED; urgency=medium
+freebsd-libs (10.3~svn296373-5) experimental; urgency=medium
 
   * Build kinfo_getvmobject.c only on kfreebsd host architecture
   * Also build kinfo_getvmmap.c (Closes: #823385) and the rest of
