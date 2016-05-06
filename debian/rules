@@ -291,10 +291,10 @@ ifeq ($(kernel), kfreebsd)
 
 	mkdir -p $(CURDIR)/debian/tmp/usr/bin
 	install -m755 debian/libusb-config $(CURDIR)/debian/tmp/usr/bin
+endif
 
 	mkdir -p $(CURDIR)/debian/tmp/usr/include/sys
 	install -m644 sys/sys/sbuf.h $(CURDIR)/debian/tmp/usr/include/sys
-endif
 
 	dh_install -a --list-missing --sourcedir=debian/tmp
 
