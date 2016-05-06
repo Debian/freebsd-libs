@@ -1,6 +1,8 @@
 freebsd-libs (10.3~svn296373-6) UNRELEASED; urgency=medium
 
-  * Fix FTBFS on linux: installing sbuf.h is not kfreebsd-specific
+  * Fix FTBFS on !kfreebsd: installing sbuf.h in libsbuf-dev is not
+    kfreebsd-specific
+  * Now using Standards-Version 3.9.8 (no changes needed).
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Fri, 06 May 2016 12:23:46 +0100
 
