@@ -7,7 +7,7 @@ Uploaders:
  Robert Millan <rmh@debian.org>,
  Christoph Egger <christoph@debian.org>,
  Steven Chamberlain <steven@pyro.eu.org>,
-Build-Depends: debhelper (>= 7), pkg-config,
+Build-Depends: debhelper (>= 9), pkg-config,
  bmake (>= 20131001-4~),
  m4,
  freebsd-mk (>= 10.3~),
