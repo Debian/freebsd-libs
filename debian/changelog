@@ -1,3 +1,11 @@
+freebsd-libs (10.3~svn296373-5) UNRELEASED; urgency=medium
+
+  * Build kinfo_getvmobject.c only on kfreebsd host architecture
+  * Also build kinfo_getvmmap.c (Closes: #823385) and the rest of
+    kinfo_* functions, on kfreebsd only
+
+ -- Steven Chamberlain <steven@pyro.eu.org>  Fri, 06 May 2016 10:36:46 +0100
+
 freebsd-libs (10.3~svn296373-4) experimental; urgency=medium
 
   * Use new preferred hostname for upstream SVN with HTTPS
