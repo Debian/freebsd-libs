@@ -31,11 +31,16 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
-CFLAGS += \
-	-Wall -pipe -fPIC -I. -I$(CURDIR)/sys -D_GNU_SOURCE \
+EXTRA_CFLAGS = \
 	-D__FreeBSD_version=__FreeBSD_kernel_version \
-	-I/usr/include/freebsd \
-	-Werror=implicit-function-declaration
+	-D_GNU_SOURCE -pipe -Wall \
+	-Werror=implicit-function-declaration \
+	-I. -I$(CURDIR)/sys \
+	-isystem /usr/include/freebsd \
+	-fPIC \
+	$(CPPFLAGS) \
+	$(NULL)
+CFLAGS   += $(EXTRA_CFLAGS)
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
@@ -73,7 +78,7 @@ PMAKE_FOREIGN = \
 	CFLAGS="$(CFLAGS) -D__FREEBSD_GLUE_USE_EMBEDDED_HEADERS" \
 	$(PMAKE_COMMON)
 
-kernel = $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
+kernel = $(DEB_HOST_ARCH_OS)
 
 get-orig-source:
 	rm -rf $(ORIGDIR)
