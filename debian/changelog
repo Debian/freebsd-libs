@@ -1,7 +1,11 @@
 freebsd-libs (10.3~svn296373-9) UNRELEASED; urgency=medium
 
+  [ Aurelien Jarno ]
   * libusb2-dev: fix libusb-1.0-0-dev versioned provided, set the version to
     1.0.6.
+
+  [ Steven Chamberlain ]
+  * Update my email address in Uploaders
 
  -- Aurelien Jarno <aurel32@debian.org>  Tue, 05 Jul 2016 23:20:36 +0200
 
