@@ -1,4 +1,4 @@
-freebsd-libs (10.3~svn296373-9) UNRELEASED; urgency=medium
+freebsd-libs (10.3~svn296373-9) unstable; urgency=medium
 
   [ Aurelien Jarno ]
   * libusb2-dev: fix libusb-1.0-0-dev versioned provided, set the version to
@@ -8,7 +8,7 @@ freebsd-libs (10.3~svn296373-9) UNRELEASED; urgency=medium
   * Update my email address in Uploaders
   * Use HTTPS for Vcs-Browser URI
 
- -- Aurelien Jarno <aurel32@debian.org>  Tue, 05 Jul 2016 23:20:36 +0200
+ -- Steven Chamberlain <stevenc@debian.org>  Thu, 29 Sep 2016 23:29:00 +0100
 
 freebsd-libs (10.3~svn296373-8) unstable; urgency=medium
 
