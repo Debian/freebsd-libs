@@ -40,7 +40,7 @@ EXTRA_CFLAGS = \
 	-fPIC \
 	$(CPPFLAGS) \
 	$(NULL)
-CFLAGS   += $(EXTRA_CFLAGS)
+CFLAGS	+= $(EXTRA_CFLAGS)
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
