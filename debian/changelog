@@ -6,6 +6,7 @@ freebsd-libs (10.3~svn296373-9) UNRELEASED; urgency=medium
 
   [ Steven Chamberlain ]
   * Update my email address in Uploaders
+  * Use HTTPS for Vcs-Browser URI
 
  -- Aurelien Jarno <aurel32@debian.org>  Tue, 05 Jul 2016 23:20:36 +0200
 

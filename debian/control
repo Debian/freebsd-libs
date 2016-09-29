@@ -21,7 +21,7 @@ Build-Depends: debhelper (>= 9), pkg-config,
 # libncurses5-dev: needed by libalias
  libncurses5-dev [kfreebsd-any],
  freebsd-glue (>= 0.2.20~),
-Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/freebsd-libs/
+Vcs-Browser: https://anonscm.debian.org/viewvc/glibc-bsd/trunk/freebsd-libs/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/freebsd-libs/
 Standards-Version: 3.9.8
 
