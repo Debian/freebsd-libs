@@ -1,3 +1,12 @@
+freebsd-libs (10.3~svn296373-10) UNRELEASED; urgency=medium
+
+  * Pre-define MACHINE_ARCH with the host architecture we are building
+    for, otherwise freebsd-make naively assumes it is the same as the
+    build architecture.  Fixes a cross-build issue reported by Helmut
+    Grohne, thanks!
+
+ -- Steven Chamberlain <stevenc@debian.org>  Fri, 03 Feb 2017 15:00:12 +0000
+
 freebsd-libs (10.3~svn296373-9) unstable; urgency=medium
 
   [ Aurelien Jarno ]

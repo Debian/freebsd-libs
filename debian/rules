@@ -31,6 +31,16 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
+MACHINE_ARCH		:= $(DEB_HOST_ARCH_CPU)
+
+ifeq ($(DEB_HOST_ARCH_CPU), arm)
+ifneq (,$(findstring armhf,$(DEB_HOST_ARCH)))
+MACHINE_ARCH		:= armv6hf
+else
+MACHINE_ARCH		:= armv6
+endif
+endif
+
 EXTRA_CFLAGS = \
 	-D__FreeBSD_version=__FreeBSD_kernel_version \
 	-D_GNU_SOURCE -pipe -Wall \
@@ -70,6 +80,7 @@ PMAKE_COMMON = \
 	SHLIB_MAJOR=0 \
 	bmake \
 	CC=$(CC) \
+        MACHINE_ARCH=$(MACHINE_ARCH) \
 	$(NULL)
 PMAKE = \
 	CFLAGS="$(CFLAGS)" \
