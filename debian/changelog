@@ -1,3 +1,9 @@
+freebsd-libs (10.3~svn296373-11) UNRELEASED; urgency=medium
+
+  * Fix libkiconv4 Description; it is not a udeb.
+
+ -- Steven Chamberlain <stevenc@debian.org>  Sun, 05 Mar 2017 13:13:48 +0000
+
 freebsd-libs (10.3~svn296373-10) unstable; urgency=medium
 
   * Pre-define MACHINE_ARCH with the host architecture we are building

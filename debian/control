@@ -294,7 +294,7 @@ Description: FreeBSD IPX address conversion support library (udeb)
 Package: libkiconv4
 Architecture: kfreebsd-any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: FreeBSD kernel side iconv library (udeb)
+Description: FreeBSD kernel side iconv library
  The kiconv library provides multi-byte character conversion tables for kernel
  side iconv service.
 
